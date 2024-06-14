@@ -1,31 +1,33 @@
-- title: Academic Positions
+- title: Employment
   type: time_table
   contents:
-    - title: Professor (W3) in Comparative Politics
-      institution: Institute for Political Science, University of Münster
+    - title: Consultant
+      institution: The World Bank
       year: 2023 - today
 
-    - title: Associate Professor (tenured)
-      institution: Department of Political Science, Aarhus University
-      year: 2021 - today
+    - title: Research Associate
+      institution: Pakistan Institute of Development Economics
+      year: 2022 - 2023
 
-    - title: SNF Ambizione Grant Holder
-      institution: Department of Political Science, University of Zurich
-      year: 2019 – 2023
-
-    - title: Senior Researcher (Oberassistent)
-      institution: Department of Political Science, University of Zurich
-      year: 2015 – 2019
+    - title: Head of Accounts Department
+      institution: Cadet College Hasanabdal
+      year: 2016 – 2022
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Leicester, Leicester, United Kingdom
-      year: 2016
-    - title: Diplom (MA) in Political Science
-      institution: University of Bamberg, Bamberg, Germany
-      year: 2013
+    - title: PhD in Public Policy
+      institution: KDI School of Public Policy and Management
+      year: Enrolled
+    - title: Master in Public Policy
+      institution: KDI School of Public Policy and Management
+      year: 2022
+    - title: Master in Management Sciences
+      institution: COMSATS University Islamabad
+      year: 2020
+    - title: Bachelor in Public Administration
+      institution: COMSATS University Islamabad
+      year: 2018
 
 - title: Projects
   type: time_table
