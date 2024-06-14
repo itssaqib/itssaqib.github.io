@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Presenting at University of Chicago - Summer School
+title: Presenting at University of Chicago
 date: 2024-07-22
 description: Stone Center for Research on Wealth Inequality and Mobility - UC Conference and Summer School July 22-26, 2024, 
 ---
