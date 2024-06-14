@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Presenting at the University of Chicago
-date: 2024-04-15 00:00:00
+date: 2024-07-22 00:00:00
 description: Conference - Stone Center for Research on Wealth Inequality and Mobility UC
 ---
 
