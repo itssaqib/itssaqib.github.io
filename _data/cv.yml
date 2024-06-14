@@ -40,5 +40,17 @@
       description: In my SNSF Ambizione project, my research team and I tried to understand the causes and consequences of radical party emergence.
 
 - title: Research Interests
-    - title: Research Interests
-      description: I am interested in development economics, which addresses how the livelihoods of vulnerable populations can be improved. My research interests include economic development, terrorism, education, e-governance, and migration. My research work focuses on the impact evaluation of large-scale socioeconomic programs in developing countries. I utilize econometric models along with extensive fieldwork to establish causal relationships and address research questions.
+  type: nested_list
+  contents:
+    - title: Development Economics
+      items:
+        - Education.
+        - Terrorism.
+        - e-Governance.
+        - Migration.
+        - Natural Disasters.
+    - title: Causal Inference
+      items:
+        - Survey experiments.
+        - Quasi-experiments.
+        - Field experiments.
