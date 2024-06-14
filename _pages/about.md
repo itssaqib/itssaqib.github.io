@@ -19,7 +19,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am a consultant at the <a href="https://www.worldbank.org/en/about/unit/unit-dec/impactevaluation/AI#3">Development Impact - Artificial Intelligence (DIME AI) of the World Bank</a> as well as a doctorate student & stata instructor at the <a href="https://kdischool.ac.kr/">Korean Development Institute (KDI) School of Public Policy and Management</a>. Before that, I have been a research associate with the Pakistan Institute of Development Economics (PIDE). 
+I am a consultant at the <a href="https://www.worldbank.org/en/about/unit/unit-dec/impactevaluation/AI#3">Development Impact - Artificial Intelligence (DIME AI) of the World Bank</a> as well as a doctorate student & stata instructor at the <a href="https://kdischool.ac.kr/">Korean Development Institute (KDI) School of Public Policy and Management</a>. Before that, I have been a research associate with the <a href="https://pide.org.pk/">Pakistan Institute of Development Economics (PIDE)</a>. 
 
 I am interested in development economics, which addresses how the livelihoods of vulnerable populations can be improved. My research interests include economic development, terrorism, education, e-governance, and migration. My research work focuses on the impact evaluation of large-scale socioeconomic programs in developing countries. I utilize econometric models along with extensive fieldwork to establish causal relationships and address research questions.
 
