@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Standardization ado for Stata
-date: 2015-08-06 16:00:00
-description: Standardization ado for Stata
+title: Won a Research Grant
+date: 2024-4-15
+description: Impact of Land Record Digitization on Land-related Corruption: Evidence from Pakistan by Pakistan Institute of Development Economics 
 ---
 
-I often want to standardize my variables before using them in models. Especially if a variable either is heavily right-skewed then I like to log standardize the variable; e.g. number of protesters) or the coefficient of variable is uninterpretable anyways (then I tend to follow Gelman's (2008) approach; e.g. age and age^2 which results in very small coefficients in a regression). So far I generated such standardizations myself, e.g.:
-```bash
-gen log_protesters=log(protesters+1)
-```
-However, since I tend to be lazy and try to minimize the amount of syntax I produce, I programmed a small program called standard2 which creates three new variables for each variable specified after the command `standard2`:
-```bash
-standard2 variable1 variable2
-```
-It will then create three new variables for each variable specified, e.g. for variable1: std2_variable1 (variable1 standardized by 2 std. dev.); mc_variable1 (variable1 mean centered); log_variable1=log(variable1+1)).
+I won a research grant of PKR 3 million for <a href="[https://sites.google.com/site/chungeunyoon/](https://rasta.pide.org.pk/cgp/impact-of-the-land-record-management-information-system-lrmis-on-land-related-corruption-in-government-administration-and-management-departments-a-quasi-natural-experiment-in-punjab-pakistan/)">Impact of the Land Record Management Information System (LRMIS) on Land Related Corruption in Government Administration and Management Departments: A Quasi-Natural Experiment in Punjab, Pakistan</a> from Research for Social Transformation and Advancement (RASTA) - Pakistan Institute of Development Economics (PIDE). h  on the Impact of Terrorism on Education: Evidence from the Death of Osama Bin Laden.
 
-The program can be downloaded as an stata ado file [here]({{ site.baseurl }}/assets/code/emdb.ado). You will need to unpack the .zip and copy the ado into your stata ado file directory (find a how to do: here).
+Project Brief:
+```bash
+Does the digitization of land records reduce corruption in the land administration department? is a main question that I aim to answer through this research. Employing a quasi-experimental design, I aim to estimate the effect of early access to the Punjab Land Record Management Information System (PLRMIS) on the land-related corruption in government departments using data from Anti-Corruption Establishment Punjab. The findings of this research will provide evidence of the impact of PLRMIS and will help to understand the effectiveness of digitization and e-governance systems in improving land administration and reducing information asymmetry.
+```
+Public Policy Relevance:
+```bash
+By promoting anti-corruption measures, enhancing digital capabilities, and fostering collaboration, the project aims to support the integration of digitalization initiatives, leading to transparent and efficient land administration systems and overall structural transformation in the region. In addition, the after the outcome of this research project, the LRMIS could be upscaled to all provinces of Pakistan to fight corruption. The findings can inform public investment decisions and policy-making processes by providing evidence on the impact of digitalization on corruption and the potential for improving governance and transparency in the land sector.
+Abstract:
+```
