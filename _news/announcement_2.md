@@ -1,58 +1,14 @@
 ---
 layout: post
-title: Stata, simulations & replacing built-in matrix e(b)
-date: 2016-05-23 16:00:00
-description: how to replace e(b) matrix in Stata
+title: Presenting at University of Chicago - Summer School
+date: 2024-07-22
+description: Stone Center for Research on Wealth Inequality and Mobility - UC Conference and Summer School July 22-26, 2024, 
 ---
 
-Yesterday I tried to run some simulations in stata. However, what I intended to do turned out to be a stata nightmare:
+I will present my working paper with <a href="https://sites.google.com/site/chungeunyoon/">Yoon Chungeun</a> on the Impact of Terrorism on Education: Evidence from the Death of Osama Bin Laden.
 
-First, I ran a conditional logit model. Second, based on the parameter estimates I wanted to take 1,000 draws (or more) from the multivariate normal distribution defined by my conditional logit model coefficients and its covariance matrix. After that I planed to calculate 1,000 predicted probabilities for each observation in my dataset. The reason why I wanted to do this was to compare a _factual_ scenario existing in my dataset with a _counterfactual_ one that I made up by changing some of the variables in the dataset.
+Abstract:
 
-Everything went smoothly but for some reason there was no variation whatsoever in my simulations. I first did not realize what the issue was, the code was clean, the loop worked, everything seemed to be fine.
-
-Turned out the issue was that stata does not want users to replace the built-in coefficients matrix e(b). Yet, this was what my idea was all about.
-
-To solve the issue I wrote a wrapper (download: [here]({{ site.baseurl }}/assets/code/emdb.ado)). You will need to unpack the .zip and copy the ado into your stata ado file directory (find a how to do: here). Let's just consider the following very short example:
-
-1. load example data:
 ```bash
-use http://www.stata-press.com/data/r13/clogitid
+This paper examines the effect of terrorism on education. We exploit the death of Osama bin Laden in Pakistan and the variation across the birth cohorts and districts exposed to this event. Our analysis consists of two stages: (1) the relationship between two events, the Red Mosque Siege & the death of Bin Laden, and the incidence of terrorist attacks using difference-in-differences; and (2) the causal relationship between terrorist attacks and educational outcomes using the instrumental variable approach. To investigate the first point, we follow 573 tehsils (sub-districts) over 612 months from 1970 to 2020 and identify more than 15,000 terrorism events that took place during that period in the Global Terrorism Database. We also use the population censuses from 1997 and 2017 at the tehsil level to normalize the number of attacks by dividing it by the population of the tehsil. In the second stage, we use the Pakistan Social Living Measurement survey consisting of 3 million observations from 2006 to 2020. We match the survey data with terrorism in two ways. First, we match the year of an attack with schooling years at the district level to instrument the effect of terrorism on education. Second, we count the number of attacks an individual has experienced while of school age and match it with the 2020 PSLM data to operationalize the instrumental variable. The outcomes assessed in this study are categorized into three types: 1) the prevalence of terrorism, 2) schooling outcomes across all datasets, and 3) educational outcomes specifically pertaining to data from the year 2020. Our findings show that his death led to a 50 percent increase in terrorist attacks targeting educational institutions. This surge in attacks caused a reduction in educational attainment, with years of education decreasing by 0.65 and the primary school completion rate dropping by 7.3 percentage points. The negative impact was more severe for girls than boys, high-income households than low-income ones, and higher parent education groups than low-education ones. These findings suggest that the elimination of a terrorist leader can incite retaliatory attacks, which, in turn, detrimentally affect the educational prospects of civilians, with particularly profound effects on youth in affected areas.
 ```
-1. check variables:
-```bash
-list y x1 x2 id in 1/11
-```
-1. calculate conditonal logit model with id as group parameter:
-```bash
-clogit y x1 x2, group(id)
-```
-1. check out the coefficients matrix:
-```bash
-matrix list e(b)
-==== x1 = .65336296 x2 = .0659169
-```
-1. Let's just say we would like to exchange x1(=0.8) and x2(=1.5)
-```bash
-generate x1_new = 0.8
-generate x2_new = 1.5
-```
-1. Now we create a matrix from these values: (usually you will build a loop running through all ns. By that you can exchange the matrix for all the draws you made from the original model.
-```bash
-mkmat x1_new x2_new if _n==1, matrix(draw)
-```
-1. check if it worked (PS:ALWAYS CALL THE MATRIX `draw`!!!! emdb is built only for this matrix name):
-```bash
-matrix list draw
-```
-1. looks good. Now we can use the wrapper (`emdb`) to exchange the matrix with our draws:
-```bash
-emdb
-```
-1. did it work?!?
-```bash
-matrix list e(b)
-====x1 =.80000001 x2 = 1.5
-*-> It did, Heureka!
-```
-The clue to solve the issue is `emdb`. This is the very short wrapper I wrote to force stata to let users replace e(b).
