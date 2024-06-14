@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://danbischof.github.io/sitemap.xml
+Sitemap: https://itssaqib.github.io/sitemap.xml
