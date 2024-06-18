@@ -2,7 +2,7 @@
 layout: post
 title: Honorable Mention by ADB–IEA Innovative Policy Research Award
 date: 2024-03-15 00:00:00
-description: The long-term impact of in-utero exposure to natural disasters: Evidence from the 2010 Pakistan flood
+description: The long-term impact of in-utero exposure to natural disasters, Evidence from the 2010 Pakistan flood
 ---
 
 The Asian Development Bank (ADB) and the International Economic Association (IEA) - <a href="https://www.iea-world.org/fellowship-and-prizes/prizes/">Innovation Police Research Award</a> 2024 acknowledge research excellence including honorable mentions of high-quality papers.
