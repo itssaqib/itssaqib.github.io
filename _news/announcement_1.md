@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Research Grant of PKR 3 Million from RASTA PIDE
+title: Impact Evaluation Research Grant from RASTA PIDE
 date: 2024-04-15 00:00:00
 description: Impact of Land Record Digitization on Land-related Corruption - Evidence from Pakistan by Pakistan Institute of Development Economics 
 ---
