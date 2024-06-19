@@ -9,7 +9,7 @@ nav_order: 6
 
 **Instructor:**
 *  [MA & PhD:] *Stata Workshops -- KDI School* [[Syllabus]]({{ site.baseurl }}/assets/pdf/stata_presentation.pdf)
-*  [MA & PhD:] *Stata Instructor -- KDI School* [<a href="https://www.supersaas.com/schedule/kdiswritingcenter/KDIS_DAS_Center_1:1_Tutoring">[Appointment Base]]
+*  [MA & PhD:] *Stata Instructor -- KDI School* <a href="https://www.supersaas.com/schedule/kdiswritingcenter/KDIS_DAS_Center_1:1_Tutoring">[Appointment Base]
 
 **Teaching Assistant:** 
 *  [MA:] *Quantitative Methods -- KDI School* [[Syllabus]]({{ site.baseurl }}/assets/pdf/qm_syllabus.pdf)
