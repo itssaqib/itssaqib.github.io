@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href="https://kdischool.ac.kr/](https://www.kdischool.ac.kr/board.es?mid=a10201020200&bid=0022&act=view&list_no=17616">KDI School</a> | <a href="https://www.worldbank.org/en/about/unit/unit-dec/impactevaluation/AI">World Bank </a> 
+subtitle: <a href="https://www.kdischool.ac.kr/board.es?mid=a10201020200&bid=0022&act=view&list_no=17616">KDI School </a>  | <a href="https://www.worldbank.org/en/about/unit/unit-dec/impactevaluation/AI">World Bank </a> 
 
 profile:
   align: right
