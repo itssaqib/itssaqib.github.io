@@ -32,12 +32,9 @@
 - title: Projects
   type: time_table
   contents:
-    - title: <a href="https://demnorm.github.io">DEMNORM (approx. 1 Million Euro funded by Carlsberg Foundation & AUFF)</a>
-      year: 2021-now
-      description: My team and I seek to understand the role of social norms for democracy.
-    - title: <a href="https://extremeentrance.github.io">Extreme Entrance (approx. 700,000 Euros funded by Swiss National Science Foundation)</a>
-      year: 2019-2023
-      description: In my SNSF Ambizione project, my research team and I tried to understand the causes and consequences of radical party emergence.
+    - title: <a href="https://rasta.pide.org.pk/cgp/impact-of-the-land-record-management-information-system-lrmis-on-land-related-corruption-in-government-administration-and-management-departments-a-quasi-natural-experiment-in-punjab-pakistan/">LRMIS (3 Million rupees funded by RASTA - PIDE)</a>
+      year: 2024-now
+      description: I seek to evaluate the spillover effects of state capacity building. Particularly I am interested in estimating the causal effect of land record digitization on corruption, disputes and access to credit.
 
 - title: Research Interests
   type: nested_list
