@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Presenting at the AASLE 2024 Conference during December 2024 Bankgkok, Thailand
+title: Presenting at the AASLE 2024 Conference in December 2024 in Bangkok, Thailand
 date: 2024-09-07 00:00:00
-description: Conference - Asian and Australasian Scoeity of Labour Economics
+description: Conference - Asian and Australasian Society of Labour Economics
 ---
 
-I will present my working paper with <a href="https://sites.google.com/site/chungeunyoon/">Yoon Chungeun</a> on the Impact of Terrorism on Education: Evidence from the Death of Osama Bin Laden at the <a href="https://www.aareconference.com.au/">Australian Association for Research in Education (AARE) 2024 Conference in Sydney during Demeber 2024</a>.
+I will present my working paper with <a href="https://sites.google.com/site/chungeunyoon/">Yoon Chungeun</a> on the Impact of Terrorism on Education: Evidence from the Death of Osama Bin Laden at the <a href="https://www.aasle.org/">Asian and Australasian Society of Labour Economics (AASLE) 2024 Conference in December 2024 in Bangkok, Thailand</a>.
 
 Abstract:
 
