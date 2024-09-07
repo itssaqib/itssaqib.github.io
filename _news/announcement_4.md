@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Presenting at the Australian Association for Research in Education (AARE) 2024 Conference in Sydney during Demeber 2024
+title: Presenting at the AARE 2024 Conference in Sydney in Demeber 2024
 date: 2024-09-05 00:00:00
-description: Conference - Stone Center for Research on Wealth Inequality and Mobility UC
+description: Conference - Australian Association for Research in Education
 ---
 
 I will present my working paper with <a href="https://sites.google.com/site/chungeunyoon/">Yoon Chungeun</a> on the Impact of Terrorism on Education: Evidence from the Death of Osama Bin Laden at the <a href="https://www.aareconference.com.au/">Australian Association for Research in Education (AARE) 2024 Conference in Sydney during Demeber 2024</a>.
