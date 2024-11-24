@@ -19,7 +19,7 @@ latest_posts: false # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-I am a consultant with the Development Impact Evaluation (DIME) AI unit at the World Bank</a> and a doctoral candidate and Stata instructor at the KDI School of Public Policy and Management. Previously, I worked as a Research Associate at the Pakistan Institute of Development Economics (PIDE).
+I am a consultant with the Development Impact Evaluation (DIME) AI unit at the World Bank and a doctoral candidate and Stata instructor at the KDI School of Public Policy and Management. Previously, I worked as a Research Associate at the Pakistan Institute of Development Economics (PIDE).
 
 My professional journey spans institutions like the World Bank's DIME unit, the Korean Development Institute (KDI), and PIDE. I am interested in development economics, which answers how the livelihoods of vulnerable populations can be improved. My research interests include economic development, terrorism, education, e-governance, migration, and artificial intelligence. 
 
