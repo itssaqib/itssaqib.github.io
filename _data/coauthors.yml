@@ -1,14 +1,18 @@
 "allinger":
-  - firstname: ["Chungeun"]
+  - firstname: ["Chungeun Yoon"]
     url: https://sites.google.com/site/chungeunyoon/
 
 "bernardi":
-  - firstname: ["Inayat"]
+  - firstname: ["Inayat Ullah"]
     url: https://www.inayat.pro/
 
 "cheng-matsuno":
-  - firstname: ["Rida"]
+  - firstname: ["Rida Ali Khan"]
     url: https://ridaalikhan.github.io/
+
+"cheng-matsun":
+  - firstname: ["Saeeda Khanum"]
+    url: https://s3h.nust.edu.pk/faculty/saeeda-khanum/
 
 "cohen":
   - firstname: ["Ghulam"]
