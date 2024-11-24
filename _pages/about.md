@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Room: 1509, Building 101</p>
+    <p>Room: 2309, Building 102</p>
     <p>Korean Development Institute</p>
     <p>30149 Sejong-ro, Sejong</p>
     <p>Republic of Korea</p>
