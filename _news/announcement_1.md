@@ -5,7 +5,7 @@ date: 2024-04-15 00:00:00
 description: Impact of Land Record Digitization on Land-related Corruption - Evidence from Pakistan by Pakistan Institute of Development Economics 
 ---
 
-I won a research grant of PKR 3 million for <a href="[https://sites.google.com/site/chungeunyoon/](https://rasta.pide.org.pk/cgp/impact-of-the-land-record-management-information-system-lrmis-on-land-related-corruption-in-government-administration-and-management-departments-a-quasi-natural-experiment-in-punjab-pakistan/)">Impact of the Land Record Management Information System (LRMIS) on Land Related Corruption in Government Administration and Management Departments: A Quasi-Natural Experiment in Punjab, Pakistan</a> from Research for Social Transformation and Advancement (RASTA) - Pakistan Institute of Development Economics (PIDE).
+I won a research grant of PKR 3 million for the Impact Evaluation of the Land Record Management Information System (LRMIS) on Land Related Corruption in Government Administration and Management Departments: A Quasi-Natural Experiment in Punjab, Pakistan</a> from Research for Social Transformation and Advancement (RASTA) - Pakistan Institute of Development Economics (PIDE).
 
 Project Brief:
 
