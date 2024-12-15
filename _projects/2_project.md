@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Digitization
-description: Studying the imapcts of digitization
+description: Studying the impacts of digitization
 img: assets/img/digitization.jpg
-importance: 1
+importance: 2
 category: ongoing
 related_publications: false
 ---
