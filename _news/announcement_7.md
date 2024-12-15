@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Competative Fellowship Award - KDI School of Public Policy and Management
-date: 2024-09-07 00:00:00
+title: Competitive Fellowship Award - KDI School of Public Policy and Management
+date: 2024-12-12 00:00:00
 description: RCT - Improving Displaced Livelihood in Pakistan
 ---
 
