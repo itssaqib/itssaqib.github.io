@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: papers.
+description: papers
 ---
 
 <!-- _pages/publications.md -->
