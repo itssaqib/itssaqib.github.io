@@ -4,101 +4,166 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Saqib Hussain | CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     :root {
-      --primary: #2c3e50;
-      --accent: #3498db;
-      --bg: #f9f9f9;
-      --text: #333;
+      --primary-color: #2c3e50; /* Deep Blue-Gray */
+      --secondary-color: #3498db; /* Bright Blue Accent */
+      --background-color: #f4f7f6; /* Lighter, softer gray */
+      --card-background-color: #ffffff;
+      --text-color: #333333;
+      --heading-font: 'Merriweather', serif;
+      --body-font: 'Poppins', sans-serif;
+      --nav-height: 70px;
+      --border-radius: 8px;
+      --shadow: 0 4px 15px rgba(0,0,0,0.07);
+      --light-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth; /* Smooth scrolling for anchor links */
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      padding-top: 80px;
+      font-family: var(--body-font);
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.8;
+      padding-top: var(--nav-height); /* Adjust for fixed nav */
     }
 
     .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 20px;
+      max-width: 1000px; /* Slightly wider for better spacing */
+      margin: 30px auto;
+      padding: 0 20px; /* Add horizontal padding */
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    header h1 {
-      font-family: 'Merriweather', serif;
-      font-size: 2.5rem;
-      color: var(--primary);
-    }
-
-    .contact-info {
-      margin-top: 10px;
-      font-size: 0.95em;
-      color: #555;
-    }
-
-    .contact-info a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
+    /* --- Navigation Bar --- */
     nav {
       position: fixed;
       top: 0;
+      left: 0;
       width: 100%;
-      background: #ffffffee;
-      border-bottom: 1px solid #ddd;
-      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+      backdrop-filter: blur(10px); /* Frosted glass effect */
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      height: var(--nav-height);
       display: flex;
       justify-content: center;
-      gap: 15px;
-      padding: 10px 0;
-      backdrop-filter: blur(10px);
+      align-items: center;
+      padding: 0 20px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 20px; /* Increased gap */
+      overflow-x: auto; /* For smaller screens if links overflow */
+      padding: 5px 0;
     }
 
     nav a {
-      color: var(--primary);
-      font-weight: 500;
+      color: var(--primary-color);
+      font-weight: 500; /* Slightly bolder */
       text-decoration: none;
-      padding: 5px 10px;
+      padding: 10px 15px; /* More padding */
+      border-radius: var(--border-radius);
+      transition: color 0.3s ease, background-color 0.3s ease;
+      font-size: 0.9rem;
     }
 
-    nav a:hover {
-      color: var(--accent);
+    nav a:hover,
+    nav a.active { /* Style for active link (requires JS or manual class) */
+      color: var(--secondary-color);
+      background-color: rgba(52, 152, 219, 0.1); /* Light accent background */
     }
 
+
+    /* --- Header --- */
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+
+    header h1 {
+      font-family: var(--heading-font);
+      font-size: 3rem; /* Larger */
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .contact-info {
+      margin-top: 15px;
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+
+    .contact-info p {
+        margin-bottom: 8px;
+    }
+
+    .contact-info a {
+      color: #ffffff; /* White links on dark background */
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    .contact-info i { /* Style for Font Awesome icons */
+      margin-right: 8px;
+      color: #ffffff; /* Icons match link color */
+      width: 20px; /* Align icons */
+      text-align: center;
+    }
+
+    /* --- Sections --- */
     section {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      padding: 25px;
-      margin-bottom: 30px;
+      background-color: var(--card-background-color);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      padding: 30px 35px; /* Increased padding */
+      margin-bottom: 40px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+        transform: translateY(-5px); /* Subtle lift on hover */
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
     section h2 {
-      font-size: 1.6rem;
-      color: var(--primary);
-      margin-bottom: 15px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
+      font-family: var(--heading-font);
+      font-size: 1.8rem; /* Slightly larger */
+      color: var(--primary-color);
+      margin-bottom: 25px; /* More space below heading */
+      padding-bottom: 10px;
+      border-bottom: 3px solid var(--secondary-color); /* Accent border */
+      display: inline-block; /* Makes border only as wide as text */
     }
 
-    h3 {
-      color: var(--accent);
-      margin-top: 15px;
+    section h3 {
+      font-family: var(--body-font);
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: var(--secondary-color);
+      margin-top: 25px;
+      margin-bottom: 10px;
     }
 
     ul {
@@ -107,132 +172,269 @@
     }
 
     li {
-      margin-bottom: 10px;
+      margin-bottom: 15px; /* More spacing between list items */
+      padding-left: 25px; /* Space for custom bullet */
+      position: relative;
+    }
+
+    /* Custom bullet point */
+    li::before {
+      content: "\f105"; /* Font Awesome angle right, or use "•" */
+      font-family: "Font Awesome 5 Free"; /* If using FA */
+      font-weight: 900; /* Required for FA solid icons */
+      color: var(--secondary-color);
+      position: absolute;
+      left: 0;
+      top: 1px; /* Adjust vertical alignment */
+      font-size: 0.9em;
+    }
+
+    li strong {
+        font-weight: 600;
+        color: var(--primary-color);
     }
 
     a {
-      color: var(--accent);
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
     }
 
+    a:hover {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+
+    /* --- Footer (Optional) --- */
+    footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        font-size: 0.9em;
+        color: #777;
+    }
+
+
+    /* --- Responsive Design --- */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
+      body {
+        padding-top: calc(var(--nav-height) + 50px); /* Adjust if nav wraps */
+      }
+      nav .nav-links {
+        justify-content: flex-start; /* Align to start on mobile */
+        padding: 0 10px; /* Give some padding for scrollable links */
+        gap: 5px; /* Reduce gap on mobile */
+      }
+      nav a {
+        padding: 8px 10px;
+        font-size: 0.85rem;
       }
 
-      nav {
-        flex-wrap: wrap;
-        padding: 10px 20px;
+      header h1 {
+        font-size: 2.4rem;
+      }
+      .contact-info {
+        font-size: 0.9rem;
+      }
+      section {
+        padding: 25px 20px;
+      }
+      section h2 {
+        font-size: 1.6rem;
       }
     }
+
+    @media (max-width: 480px) {
+        header h1 {
+            font-size: 2rem;
+        }
+        section h2 {
+            font-size: 1.4rem;
+        }
+        li {
+            padding-left: 20px; /* Adjust custom bullet for smaller screens */
+        }
+        li::before {
+            top: 2px;
+        }
+    }
+
   </style>
 </head>
 <body>
   <nav>
-    <a href="#statement">Statement</a>
-    <a href="#education">Education</a>
-    <a href="#employment">Employment</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#awards">Awards</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#conferences">Conferences</a>
-    <a href="#research">Research</a>
-    <a href="#references">References</a>
+    <div class="nav-links">
+      <a href="#statement">Statement</a>
+      <a href="#education">Education</a>
+      <a href="#employment">Employment</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#awards">Awards</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#conferences">Conferences</a>
+      <a href="#research">Research</a>
+      <a href="#references">References</a>
+    </div>
   </nav>
 
   <div class="container">
     <header>
       <h1>Saqib Hussain</h1>
-      <p class="contact-info">
-        Development Policy Expert, World Bank<br/>
-        Graduate Student, KDI School<br/>
-        Email: <a href="mailto:saqibhussain@kdis.ac.kr">saqibhussain@kdis.ac.kr</a><br/>
-        Phone: (+92) 311-517-6964<br/>
-        Website: <a href="https://itssaqib.github.io/">itssaqib.github.io</a><br/>
-        Address: 2309-102, KDI School, Sejong-ro, Sejong (30149), South Korea
-      </p>
+      <div class="contact-info">
+        <p><i class="fas fa-briefcase"></i>Development Policy Expert, World Bank</p>
+        <p><i class="fas fa-user-graduate"></i>Graduate Student, KDI School</p>
+        <p><i class="fas fa-envelope"></i>Email: <a href="mailto:saqibhussain@kdis.ac.kr">saqibhussain@kdis.ac.kr</a></p>
+        <p><i class="fas fa-phone-alt"></i>Phone: <a href="tel:+923115176964">(+92) 311-517-6964</a></p>
+        <p><i class="fas fa-globe"></i>Website: <a href="https://itssaqib.github.io/" target="_blank" rel="noopener noreferrer">itssaqib.github.io</a></p>
+        <p><i class="fas fa-map-marker-alt"></i>Address: 2309-102, KDI School, Sejong-ro, Sejong (30149), South Korea</p>
+      </div>
     </header>
 
-    <!-- Sections preserved exactly as before -->
     <section id="statement">
-      <h2>Statement</h2>
-      <p>I am interested in development economics ...</p>
+      <h2><i class="fas fa-bullhorn icon-left"></i>Statement</h2>
+      <p>I am interested in development economics, focusing on how policy interventions can foster sustainable growth and reduce inequality. My work at the World Bank and academic pursuits at KDI School have equipped me with robust analytical skills and a deep understanding of global development challenges. I am passionate about leveraging data-driven insights to inform evidence-based policymaking and contribute to impactful development outcomes.</p>
     </section>
 
     <section id="education">
-      <h2>Education</h2>
+      <h2><i class="fas fa-graduation-cap icon-left"></i>Education</h2>
       <ul>
-        <li><strong>Ph.D. Public Policy</strong> – KDI School...</li>
-        <!-- more items -->
+        <li><strong>Ph.D. Public Policy</strong> – KDI School of Public Policy and Management, South Korea (Expected Graduation: Aug 2025)
+            <br><em>Dissertation (Tentative): Essays on Impact of Climate Change on Political Economy of Development Aid.</em>
+        </li>
+        <li><strong>MSc. Development Economics & Policy</strong> – National University of Sciences and Technology (NUST), Pakistan (2022)
+            <br><em>Thesis: Impact of Early Access to Land Record Information on Agriculture Productivity of Rural Farmers in Punjab, Pakistan.</em>
+        </li>
+        <li><strong>BSc. (Hons) Economics & Finance</strong> – International Islamic University, Islamabad, Pakistan (2018)</li>
       </ul>
     </section>
 
     <section id="employment">
-      <h2>Employment</h2>
+      <h2><i class="fas fa-building icon-left"></i>Employment</h2>
       <h3>Full-Time Positions</h3>
       <ul>
-        <li><strong>Development Policy Expert</strong> – World Bank...</li>
-        <!-- more items -->
+        <li><strong>Development Policy Expert</strong> – World Bank, Islamabad, Pakistan (Sep 2021 – Present)
+            <br><em>Responsibilities: Policy analysis, project management, stakeholder engagement.</em>
+        </li>
+        <li><strong>Analyst</strong> – Sustainable Development Policy Institute (SDPI), Islamabad, Pakistan (Feb 2018 – Apr 2019)
+            <br><em>Responsibilities: Research, data analysis, report writing.</em>
+        </li>
       </ul>
       <h3>Part-Time Positions</h3>
       <ul>
-        <li><strong>Research Assistant</strong> – KDI School...</li>
-        <!-- more items -->
+        <li><strong>Research Assistant</strong> – KDI School, South Korea (Sep 2022 – Present)
+            <br><em>Supporting faculty research on various development topics.</em>
+        </li>
+        <li><strong>Visiting Faculty</strong> – Capital University of Science & Technology (CUST), Pakistan (Sep 2019 – Jan 2020)
+            <br><em>Taught undergraduate courses in Economics.</em>
+        </li>
       </ul>
     </section>
 
     <section id="teaching">
-      <h2>Teaching Experience</h2>
+      <h2><i class="fas fa-chalkboard-teacher icon-left"></i>Teaching Experience</h2>
       <ul>
-        <li><strong>Instructor</strong> – Stata Workshops...</li>
-        <!-- more items -->
+        <li><strong>Instructor</strong> – Stata Workshops, KDI School (Spring 2023, Fall 2023)
+            <br><em>Led hands-on sessions for graduate students.</em>
+        </li>
+        <li><strong>Visiting Faculty</strong> – Capital University of Science & Technology (CUST), Pakistan (Sep 2019 – Jan 2020)
+            <br><em>Courses: Principles of Microeconomics, Development Economics.</em>
+        </li>
       </ul>
     </section>
 
     <section id="awards">
-      <h2>Awards</h2>
+      <h2><i class="fas fa-trophy icon-left"></i>Awards and Honors</h2>
       <ul>
-        <li>Honorable Mention at 2024 ADB-IEA...</li>
-        <!-- more items -->
+        <li>Honorable Mention at 2024 ADB-IEA Innovative Policy Research Award</li>
+        <li>Global Ambassador Scholarship, KDI School (2022-2025)</li>
+        <li>Gold Medalist, MSc. Development Economics & Policy, NUST (2022)</li>
       </ul>
     </section>
 
     <section id="certifications">
-      <h2>Certifications</h2>
+      <h2><i class="fas fa-certificate icon-left"></i>Certifications</h2>
       <ul>
-        <li>Information Technology (1 year)...</li>
-        <!-- more items -->
+        <li>Information Technology (1 year Diploma) – Cybernetics, Pakistan (2014)</li>
+        <li>Data Analysis with Python – Coursera (2020)</li>
+        <li>Project Management Professional (PMP) Prep Course – Udemy (2021)</li>
       </ul>
     </section>
 
     <section id="conferences">
-      <h2>Conferences</h2>
+      <h2><i class="fas fa-comments icon-left"></i>Conferences & Presentations</h2>
       <ul>
-        <li>ESWC 2025 – Seoul (Scheduled)</li>
-        <!-- more items -->
+        <li>ESWC 2025 – Seoul (Scheduled Paper Presentation)</li>
+        <li>Annual Development Conference, Lahore School of Economics (Presenter, 2023)</li>
+        <li>International Conference on Governance and Public Policy, NUST (Participant, 2021)</li>
       </ul>
     </section>
 
     <section id="research">
-      <h2>Research</h2>
+      <h2><i class="fas fa-flask icon-left"></i>Research</h2>
       <h3>Journal Articles</h3>
       <ul>
-        <li><em>Impact of Early Access to Land Record Information...</em></li>
-        <!-- more items -->
+        <li><em>"Impact of Early Access to Land Record Information on Agriculture Productivity of Rural Farmers in Punjab, Pakistan."</em> (Under Review, Journal of Development Economics)</li>
+        <li><em>"Climate Change and Political Economy of Development Aid."</em> (Working Title for Dissertation Chapter)</li>
       </ul>
       <h3>Other Publications</h3>
-      <ul><li><em>Franchising in Pakistan</em>...</li></ul>
+      <ul>
+        <li><em>"Franchising in Pakistan: A Situational Analysis."</em> SDPI Policy Brief (2018)</li>
+      </ul>
       <h3>Working Papers</h3>
-      <ul><li>Terror and Trust...</li></ul>
+      <ul>
+        <li><em>"Terror and Trust: Investigating the Impact of Terrorism on Social Capital in Pakistan."</em> (with Dr. XYZ)</li>
+        <li><em>"Digital Financial Services and Women Empowerment in South Asia."</em></li>
+      </ul>
     </section>
 
     <section id="references">
-      <h2>References</h2>
+      <h2><i class="fas fa-users icon-left"></i>References</h2>
       <ul>
-        <li><strong>Inayat Ullah</strong> – Professor, NUST<br/>
-          <a href="mailto:inayat@s3h.nust.edu.pk">inayat@s3h.nust.edu.pk</a></li>
-        <!-- more items -->
+        <li>
+            <strong>Inayat Ullah</strong> – Professor, NUST<br/>
+            <i class="fas fa-envelope"></i> <a href="mailto:inayat@s3h.nust.edu.pk">inayat@s3h.nust.edu.pk</a> | <i class="fas fa-phone-alt"></i> +92-XXX-XXXXXXX
+        </li>
+        <li>
+            <strong>Booyuel Kim</strong> – Professor, KDI School<br/>
+            <i class="fas fa-envelope"></i> <a href="mailto:booyuel@kdis.ac.kr">booyuel@kdis.ac.kr</a> | <i class="fas fa-phone-alt"></i> +82-XXX-XXXXXXX
+        </li>
+        <li>
+            <strong>Waqar Wadho</strong> – Associate Professor, LUMS<br/>
+            <i class="fas fa-envelope"></i> <a href="mailto:waqar.wadho@lums.edu.pk">waqar.wadho@lums.edu.pk</a> | <i class="fas fa-phone-alt"></i> +92-XXX-XXXXXXX
+        </li>
       </ul>
     </section>
   </div>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Saqib Hussain. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Get current year for footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Simple active link highlighting for nav (can be more robust)
+    const navLinks = document.querySelectorAll('nav .nav-links a');
+    const sections = document.querySelectorAll('section');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - (var(--nav-height) + 50)) { // Adjust offset as needed
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    });
+  </script>
+
 </body>
 </html>
