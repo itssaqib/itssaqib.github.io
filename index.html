@@ -1,519 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saqib Hussain | CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <style>
-    :root {
-      /* Aesthetic Color Palette */
-      --primary-color: #2C3333; /* Deep, muted teal/charcoal */
-      --secondary-color: #A5C9CA; /* Soft, desaturated blue/teal accent */
-      --accent-color: #E7F6F2; /* Very light complementary accent for backgrounds or subtle highlights */
-      --background-color: #FBFBFB; /* Very light, almost white */
-      --card-background-color: #FFFFFF;
-      --text-color: #393E46; /* Dark grey, not pure black */
-      --light-text-color: #7D7D7D;
-      --heading-font: 'Playfair Display', serif;
-      --body-font: 'Lato', sans-serif;
-      --nav-height: 75px;
-      --border-radius: 10px; /* Slightly more rounded */
-      --shadow: 0 5px 25px rgba(0,0,0,0.06); /* Softer, more diffused shadow */
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
+  <title>About Me | Saqib</title>
+  <style>
     body {
-      font-family: var(--body-font);
-      background-color: var(--background-color);
-      color: var(--text-color);
-      line-height: 1.7; /* Slightly reduced for a tighter look, but still readable */
-      padding-top: var(--nav-height);
-      -webkit-font-smoothing: antialiased; /* Smoother fonts */
-      -moz-osx-font-smoothing: grayscale;
+      margin: 0;
+      background-color: white;
+      color: black;
+      font-family: 'Playfair Display', serif;  
     }
-
-    .container {
-      max-width: 980px; /* Adjusted for aesthetic spacing */
-      margin: 40px auto;
-      padding: 0 25px;
+    header {
+      text-align: center;
+      padding: 2rem;
+      font-family: 'Playfair Display', serif;  
     }
-
-    /* --- Stylish Navigation Bar --- */
+    .gray-line {
+      width: 70%;
+      height: 1px;
+      background-color: #ccc;
+      margin: 0 auto;
+    }
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 1px 5px rgba(0,0,0,0.08);
-      z-index: 1000;
-      height: var(--nav-height);
+      text-align: center;
+      margin: 1rem 0;
+      font-family: 'Playfair Display', serif;  
+    }
+    nav a {
+      margin: 0 1.5rem;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;  
+    }
+
+    nav {
+      text-align: center;
+      margin: 1rem 0;
+      font-family: 'Playfair Display', serif;  
+    }
+
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      font-family: 'Playfair Display', serif;  
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 1px solid black;
+      padding-bottom: 0.5rem;
+      font-family: 'Playfair Display', serif;  
+    }
+    .bio-text {
+      flex: 1;
+      margin-right: 2rem;
+            font-family: 'Playfair Display', serif;  
+                  font-family: 'Playfair Display', serif; 
+    }
+    .image-holder {
+      width: 40%;
+      height: 428px;  /* Fixed height for image */
+      background-color: #ccc;
+      text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 0 20px;
-      border-bottom: 1px solid var(--accent-color);
+      overflow: hidden;
     }
-
-    nav .nav-links {
-      display: flex;
-      gap: 10px; /* Reduced gap for a tighter cluster */
-      overflow-x: auto;
-      padding: 5px 0;
+    .image-holder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-
-    nav a {
-      color: var(--light-text-color); /* Muted color for nav links */
-      font-weight: 400; /* Regular weight */
-      letter-spacing: 0.5px; /* Slight letter spacing */
-      text-decoration: none;
-      padding: 10px 18px;
-      border-radius: var(--border-radius);
-      transition: color 0.3s ease, background-color 0.3s ease;
-      font-size: 0.9rem;
-      position: relative;
-    }
-
-    nav a:hover {
-      color: var(--primary-color);
-    }
-    nav a.active {
-        color: var(--primary-color);
-        font-weight: 700; /* Bolder active link */
-    }
-
-    /* Underline effect for active/hover nav link */
-    nav a::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: 5px; /* Position of underline */
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: var(--secondary-color);
-        transition: width 0.3s ease;
-    }
-    nav a:hover::after,
-    nav a.active::after {
-        width: 60%; /* Width of underline on hover/active */
-    }
-
-
-    /* --- Aesthetic Header --- */
-    header {
-      text-align: center;
-      margin-bottom: 60px; /* More space after header */
-      padding: 50px 30px;
-      background-color: var(--card-background-color); /* Clean white background */
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      position: relative; /* For potential pseudo-elements if needed */
-    }
-
-    header h1 {
-      font-family: var(--heading-font);
-      font-size: 3.2rem;
-      color: var(--primary-color);
-      margin-bottom: 15px;
-      letter-spacing: 0.5px;
-    }
-
-    .contact-info {
-      margin-top: 20px;
-      font-size: 0.95rem; /* Slightly smaller for a refined look */
-      line-height: 2; /* Increased line height for contact details */
-      color: var(--light-text-color);
-    }
-
-    .contact-info p {
-        margin-bottom: 10px;
-    }
-
-    .contact-info a {
-      color: var(--primary-color); /* Match primary text color */
-      text-decoration: none;
-      font-weight: 400;
-      transition: color 0.3s ease;
-    }
-
-    .contact-info a:hover {
-      color: var(--secondary-color); /* Accent on hover */
-      text-decoration: none; /* No underline for a cleaner look */
-    }
-
-    .contact-info i {
-      margin-right: 10px;
-      color: var(--secondary-color); /* Accent color for icons */
-      width: 20px;
-      text-align: center;
-      font-size: 1.1em; /* Slightly larger icons */
-    }
-
-    /* --- Sections --- */
-    section {
-      background-color: var(--card-background-color);
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      padding: 35px 40px;
-      margin-bottom: 50px;
-      opacity: 0; /* For scroll animation */
-      transform: translateY(30px); /* For scroll animation */
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    section.visible { /* Class added by JS for scroll animation */
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    section h2 {
-      font-family: var(--heading-font);
-      font-size: 2rem; /* Larger, more prominent section titles */
-      color: var(--primary-color);
-      margin-bottom: 30px;
-      padding-bottom: 15px;
-      /* Stylish border: Left accent */
-      border-left: 4px solid var(--secondary-color);
-      padding-left: 15px;
-      position: relative; /* For the icon */
-    }
-    section h2 .section-icon { /* For icons next to h2 */
-        margin-right: 12px;
-        color: var(--secondary-color);
-        font-size: 0.9em; /* Relative to h2 size */
-    }
-
-
-    section h3 {
-      font-family: var(--body-font);
-      font-weight: 700; /* Bold H3 */
-      font-size: 1.25rem;
-      color: var(--primary-color); /* Primary color for H3 for subtlety */
-      margin-top: 30px;
-      margin-bottom: 15px;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 5px; /* Slight indent for the list */
-    }
-
-    li {
-      margin-bottom: 18px;
-      padding-left: 30px;
-      position: relative;
-      font-size: 0.95rem;
-      color: var(--text-color);
-    }
-
-    /* More subtle custom bullet */
-    li::before {
-      content: ""; /* Empty content */
-      background-color: var(--secondary-color);
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      position: absolute;
-      left: 5px;
-      top: 9px; /* Adjust vertical alignment */
-    }
-
-    li strong {
-        font-weight: 700; /* Bolder strong text */
-        color: var(--primary-color);
-    }
-
-    a {
-      color: var(--secondary-color); /* Use accent for general links */
-      text-decoration: none;
-      font-weight: 700; /* Bolder links */
-      transition: color 0.3s ease, letter-spacing 0.3s ease;
-    }
-
-    a:hover {
-      color: var(--primary-color);
-      letter-spacing: 0.3px; /* Subtle letter spacing on hover */
-    }
-
-    /* --- Footer --- */
     footer {
-        text-align: center;
-        padding: 30px 20px;
-        margin-top: 30px;
-        font-size: 0.85em;
-        color: var(--light-text-color);
-        border-top: 1px solid var(--accent-color);
+      text-align: center;
+      padding: 2rem;
+      color: #444;
+      
+    }
+    .extra-bio {
+      display: none;
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #444;
+      font-family: 'Playfair Display', serif;  
+    }
+    .expand-btn {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: .75rem;
+      margin-top: .75rem;
+      font-family: 'Playfair Display', serif;  
+    }
+    .expand-btn:hover {
+      background-color: #444;
     }
 
 
-    /* --- Responsive Design --- */
-    @media (max-width: 900px) {
-        .container {
-            margin: 30px auto;
-        }
-        header h1 {
-            font-size: 2.8rem;
-        }
-        section h2 {
-            font-size: 1.8rem;
-        }
+/* Keyframe animation for entry */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 6px 0;
+  color: #444; /* Balanced gray */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  animation: fadeSlideIn 0.6s ease forwards;
+  opacity: 0; /* Start hidden for animation */
+}
+
+/* Underline animation */
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #999; /* Lighter gray underline */
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* Hover effects */
+nav a:hover {
+  color: #111; /* Dark gray on hover */
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+  background-color: #222; /* Darker underline for active/hover */
+}
+
+/* Optional: stagger animation for each link if you use JS or SCSS */
+
+
+
+
+  </style>
+
+  
+</head>
+
+
+
+
+
+
+<body>
+  <header>
+  <h1>Saqib Hussain</h1>
+
+  </header>
+  <div class="gray-line"></div>
+  <nav>
+    <a href="index.html">About</a>
+    <a href="experience.html">Experience & Education</a>
+    <a href="research.html">Research</a>
+    <a href="photography.html">Photography</a>
+    <a href="resources.html">Resources</a>
+  </nav>
+  <div class="gray-line"></div>
+  <section>
+    <div class="bio-text">
+      <h2>About Me</h2>
+      <p>Hello! I'm Saqib, I am interested in development economics, which addresses how the livelihoods of vulnerable populations can be improved. My research interests include economic development, terrorism, education, e-governance, and migration. My research work focuses on the impact evaluation of large-scale socioeconomic programs in developing countries. I utilize econometric models along with extensive fieldwork to establish causal relationships and address research questions.</p>
+      <!-- Button to expand bio -->
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal Button Design</title>
+  <style>
+    .expand-btn {
+      background-color: transparent;
+      color: #000;
+      border: 1px solid #000;
+      padding: 5px 15px;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      outline: none;
     }
 
-    @media (max-width: 768px) {
-      body {
-        padding-top: var(--nav-height); /* Keep consistent padding */
-      }
-      nav .nav-links {
-        justify-content: flex-start;
-        gap: 0;
-      }
-      nav a {
-        padding: 10px 12px;
-        font-size: 0.8rem;
-      }
-      nav a::after {
-        bottom: 3px;
-      }
-
-      header {
-        padding: 40px 20px;
-      }
-      header h1 {
-        font-size: 2.5rem;
-      }
-      .contact-info {
-        font-size: 0.9rem;
-      }
-      section {
-        padding: 30px 25px;
-        margin-bottom: 40px;
-      }
-      section h2 {
-        font-size: 1.7rem;
-        padding-left: 10px;
-      }
-      li {
-        padding-left: 25px;
-      }
-      li::before {
-        width: 7px;
-        height: 7px;
-        top: 8px;
-      }
+    .expand-btn:hover {
+      background-color: #000;
+      color: #fff;
+      border-color: #fff;
     }
 
-    @media (max-width: 480px) {
-        header h1 {
-            font-size: 2.1rem;
-        }
-        section {
-            padding: 25px 20px;
-        }
-        section h2 {
-            font-size: 1.5rem;
-        }
-        li {
-            font-size: 0.9rem;
-        }
+    .expand-btn:focus {
+      outline: none;
     }
-
   </style>
 </head>
 <body>
-  <nav>
-    <div class="nav-links">
-      <a href="#statement">Statement</a>
-      <a href="#education">Education</a>
-      <a href="#employment">Employment</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#awards">Awards</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#conferences">Conferences</a>
-      <a href="#research">Research</a>
-      <a href="#references">References</a>
-    </div>
-  </nav>
+  <button class="expand-btn" onclick="toggleBio()">Full</button>
 
-  <div class="container">
-    <header>
-      <h1>Saqib Hussain</h1>
-      <div class="contact-info">
-        <p><i class="fas fa-briefcase"></i>Development Policy Expert, World Bank</p>
-        <p><i class="fas fa-user-graduate"></i>Graduate Student, KDI School</p>
-        <p><i class="fas fa-envelope"></i>Email: <a href="mailto:saqibhussain@kdis.ac.kr">saqibhussain@kdis.ac.kr</a></p>
-        <p><i class="fas fa-phone-alt"></i>Phone: <a href="tel:+923115176964">(+92) 311-517-6964</a></p>
-        <p><i class="fas fa-globe"></i>Website: <a href="https://itssaqib.github.io/" target="_blank" rel="noopener noreferrer">itssaqib.github.io</a></p>
-        <p><i class="fas fa-map-marker-alt"></i>Address: 2309-102, KDI School, Sejong-ro, Sejong (30149), South Korea</p>
+  <script>
+    // Example toggleBio function
+    function toggleBio() {
+      alert('Bio toggled!');
+    }
+  </script>
+      <!-- Hidden extra bio text -->
+      <div class="extra-bio">
+        <p>In addition to my academic work, I am passionate about using technology and data science to improve policy design and implementation. I collaborate with various international organizations, governments, and NGOs to conduct field experiments that address key issues in education, healthcare, and poverty alleviation. In my free time, I enjoy photography, hiking, and exploring the latest trends in technology.</p>
       </div>
-    </header>
-
-    <section id="statement">
-      <h2><span class="section-icon"><i class="fas fa-bullhorn"></i></span>Personal Statement</h2>
-      <p>I am a dedicated development economics professional with a keen interest in leveraging data-driven insights to inform impactful policy interventions. My work at the World Bank and ongoing doctoral research at KDI School focus on sustainable growth, inequality reduction, and the political economy of development aid, particularly in the context of climate change. I am committed to contributing to evidence-based policymaking for tangible global development outcomes.</p>
-    </section>
-
-    <section id="education">
-      <h2><span class="section-icon"><i class="fas fa-graduation-cap"></i></span>Education</h2>
-      <ul>
-        <li><strong>Ph.D. Public Policy</strong> – KDI School of Public Policy and Management, South Korea (Expected: Aug 2025)
-            <br><em>Dissertation (Tentative): Essays on Impact of Climate Change on Political Economy of Development Aid.</em>
-        </li>
-        <li><strong>MSc. Development Economics & Policy</strong> – National University of Sciences and Technology (NUST), Pakistan (2022)
-            <br><em>Thesis: Impact of Early Access to Land Record Information on Agriculture Productivity of Rural Farmers in Punjab, Pakistan. Gold Medalist.</em>
-        </li>
-        <li><strong>BSc. (Hons) Economics & Finance</strong> – International Islamic University, Islamabad, Pakistan (2018)</li>
-      </ul>
-    </section>
-
-    <section id="employment">
-      <h2><span class="section-icon"><i class="fas fa-building"></i></span>Employment History</h2>
-      <h3>Full-Time Positions</h3>
-      <ul>
-        <li><strong>Development Policy Expert</strong> – World Bank, Islamabad, Pakistan (Sep 2021 – Present)
-            <br><em>Key areas: Policy analysis, project cycle management, climate finance, stakeholder coordination.</em>
-        </li>
-        <li><strong>Analyst</strong> – Sustainable Development Policy Institute (SDPI), Islamabad, Pakistan (Feb 2018 – Apr 2019)
-            <br><em>Responsibilities: Quantitative and qualitative research, policy brief development, event organization.</em>
-        </li>
-      </ul>
-      <h3>Part-Time Positions</h3>
-      <ul>
-        <li><strong>Research Assistant</strong> – KDI School, South Korea (Sep 2022 – Present)
-            <br><em>Supporting faculty research on development economics and environmental policy.</em>
-        </li>
-        <li><strong>Visiting Faculty</strong> – Capital University of Science & Technology (CUST), Pakistan (Sep 2019 – Jan 2020)
-            <br><em>Courses: Principles of Microeconomics, Macroeconomics.</em>
-        </li>
-      </ul>
-    </section>
-
-    <section id="teaching">
-        <h2><span class="section-icon"><i class="fas fa-chalkboard-teacher"></i></span>Teaching & Workshops</h2>
-        <ul>
-          <li><strong>Instructor</strong> – Stata & Econometrics Workshops, KDI School (Spring 2023, Fall 2023, Spring 2024)
-              <br><em>Designed and delivered hands-on training sessions for graduate students on quantitative analysis techniques.</em>
-          </li>
-          <li><strong>Visiting Faculty</strong> – Capital University of Science & Technology (CUST), Pakistan (Sep 2019 – Jan 2020)
-              <br><em>Taught 'Principles of Microeconomics' and 'Macroeconomics' to undergraduate students.</em>
-          </li>
-        </ul>
-      </section>
-
-    <section id="awards">
-      <h2><span class="section-icon"><i class="fas fa-trophy"></i></span>Awards & Honors</h2>
-      <ul>
-        <li>Honorable Mention, 2024 ADB-IEA Innovative Policy Research Award</li>
-        <li>Global Ambassador Scholarship, KDI School of Public Policy and Management (2022-2025)</li>
-        <li>Gold Medalist, MSc. Development Economics & Policy, NUST (2022)</li>
-        <li>Dean's List, BSc. (Hons) Economics & Finance, IIUI (Multiple Semesters)</li>
-      </ul>
-    </section>
-
-    <section id="certifications">
-      <h2><span class="section-icon"><i class="fas fa-certificate"></i></span>Skills & Certifications</h2>
-      <ul>
-        <li><strong>Languages:</strong> English (Fluent), Urdu (Native), Korean (Basic)</li>
-        <li><strong>Software:</strong> Stata (Advanced), R (Intermediate), Python (Intermediate), MS Office Suite (Advanced), LaTeX</li>
-        <li><strong>Certifications:</strong>
-            <ul> <li>Information Technology (1 year Diploma) – Cybernetics, Pakistan (2014)</li>
-                <li>Advanced Data Analysis with Stata – KDI School Workshop (2023)</li>
-                <li>Project Management Essentials – World Bank Group Learning (2022)</li>
-            </ul>
-        </li>
-      </ul>
-    </section>
-
-    <section id="conferences">
-      <h2><span class="section-icon"><i class="fas fa-comments"></i></span>Conferences & Presentations</h2>
-      <ul>
-        <li>ESWC 2025 – Seoul, South Korea (Paper Presentation, Scheduled: June 2025)</li>
-        <li>Young Scholars' Forum on Development Policy, KDI School (Presenter, May 2024)</li>
-        <li>Annual Development Conference, Lahore School of Economics (Presenter, Dec 2023)</li>
-        <li>International Conference on Governance and Public Policy, NUST (Participant, Oct 2021)</li>
-      </ul>
-    </section>
-
-    <section id="research">
-      <h2><span class="section-icon"><i class="fas fa-flask"></i></span>Research & Publications</h2>
-      <h3>Journal Articles (Under Review / In Progress)</h3>
-      <ul>
-        <li><em>"Impact of Early Access to Land Record Information on Agriculture Productivity of Rural Farmers in Punjab, Pakistan."</em> (Under Review, Journal of Development Studies)</li>
-        <li><em>"Climate Shocks and Sovereign Debt: Evidence from Developing Nations."</em> (Working Paper for Dissertation)</li>
-      </ul>
-      <h3>Policy Briefs & Reports</h3>
-      <ul>
-        <li><em>"Franchising in Pakistan: A Situational Analysis."</em> SDPI Policy Brief Series No. 12 (2018).</li>
-        <li><em>"Pathways to Green Finance in Pakistan."</em> Contributor, World Bank Report (2023).</li>
-      </ul>
-      <h3>Working Papers</h3>
-      <ul>
-        <li><em>"Terror and Trust: Investigating the Impact of Terrorism on Social Capital in Pakistan."</em> (with Prof. I. Ullah)</li>
-        <li><em>"The Role of Digital Financial Services in Women's Economic Empowerment: A Cross-Country Analysis."</em></li>
-      </ul>
-    </section>
-
-    <section id="references">
-      <h2><span class="section-icon"><i class="fas fa-users"></i></span>References</h2>
-      <p style="text-align: center; color: var(--light-text-color); margin-bottom: 20px;">Available upon request.</p>
-      </section>
-  </div>
-
+    </div>
+    <!-- Image holder with the actual image -->
+    <div class="image-holder">
+      <img src="saqib_pic.png" alt="Saqib Image" />
+    </div>
+  </section>
   <footer>
-    <p>&copy; <span id="currentYear"></span> Saqib Hussain. Designed with a focus on clarity and aesthetics.</p>
+    <p>© 2025 Saqib. All rights reserved.</p>
   </footer>
 
   <script>
-    // Get current year for footer
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-    // Active link highlighting for nav
-    const navLinks = document.querySelectorAll('nav .nav-links a');
-    const sections = document.querySelectorAll('section');
-    const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height'));
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - navHeight - 50) { // Adjusted offset
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
-                link.classList.add('active');
-            }
-        });
-    });
-
-    // Scroll reveal animation for sections
-    const animatedSections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, {
-        threshold: 0.1 /* Trigger when 10% of the section is visible */
-    });
-
-    animatedSections.forEach(section => {
-        observer.observe(section);
-    });
+    function toggleBio() {
+      const extraBio = document.querySelector('.extra-bio');
+      // Toggle visibility of the extra bio
+      if (extraBio.style.display === 'none' || extraBio.style.display === '') {
+        extraBio.style.display = 'block'; // Show the extra bio text
+      } else {
+        extraBio.style.display = 'none'; // Hide the extra bio text
+      }
+    }
   </script>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll("nav a");
+    const currentPage = location.pathname.split("/").pop();
+
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+
 
 </body>
 </html>
