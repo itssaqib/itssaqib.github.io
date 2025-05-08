@@ -1,104 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saqib's Personal Website</title>
+    <meta name="author" content="Saqib Hussain">
+    <meta name="title" content="CV | Saqib Hussain">
+    <title>Saqib Hussain - CV</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f7f8e0;
             color: #333;
         }
-
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 20px;
-            text-align: center;
+        .container {
+            width: 80%;
+            margin: 0 auto;
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
+        h1, h2, h3 {
+            color: #f59c4a;
+            margin-bottom: 10px;
         }
-
-        section {
-            padding: 40px;
-            text-align: center;
+        h2, h3 {
+            border-bottom: 2px solid #f59c4a;
+            padding-bottom: 5px;
         }
-
-        section h2 {
-            font-size: 2em;
+        .section {
+            margin-bottom: 30px;
+        }
+        .contact-info, .education, .employment, .awards, .certifications, .conferences, .publications, .references {
+            margin-bottom: 20px;
+        }
+        .contact-info a {
+            text-decoration: none;
             color: #007bff;
         }
-
-        .bio {
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .contact {
-            margin-top: 30px;
-            font-size: 1.2em;
-        }
-
-        footer {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        a:hover {
+        .contact-info a:hover {
             text-decoration: underline;
         }
-
+        .subsection {
+            margin-left: 20px;
+        }
+        .date {
+            color: #555;
+        }
+        .award, .research-grant {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
-
 <body>
+    <div class="container">
+        <header>
+            <h1>Saqib Hussain</h1>
+        </header>
 
-    <header>
-        <h1>Welcome to Saqib's Personal Website</h1>
-    </header>
+        <!-- Contact Information -->
+        <section class="contact-info section">
+            <p><strong>Development Policy Expert</strong>, <a href="https://www.worldbank.org/en/about/unit/unit-dec/impactevaluation/ai/impact-ai">World Bank</a> <span class="date">2023-Current</span></p>
+            <p><strong>Graduate Student</strong>, <a href="https://kdischool.ac.kr/board.es?mid=a10201020300&bid=0022&act=view&list_no=17616&nPage=2&keyField=">KDI School</a> <span class="date">Enrolled</span></p>
+            <p>Email: <a href="mailto:saqibhussain@kdis.ac.kr">saqibhussain@kdis.ac.kr</a></p>
+            <p>Phone: (+92) 311-517-6964</p>
+            <p>Website: <a href="https://itssaqib.github.io/">https://itssaqib.github.io/</a></p>
+            <p>Address: 2309-102, KDI School, Sejong-ro, Sejong (30149), South Korea</p>
+        </section>
 
-    <section>
-        <h2>About Me</h2>
-        <div class="bio">
-            <p>Hello! I'm Saqib, a passionate developer and tech enthusiast. I enjoy coding and working on innovative projects.
-                I'm always looking for new challenges and opportunities to learn. Feel free to explore my work and contact me for collaboration or any inquiries.</p>
-        </div>
-    </section>
+        <!-- Statement -->
+        <section class="statement section">
+            <h2>Statement</h2>
+            <p>I am interested in development economics, which addresses how the livelihoods of vulnerable populations can be improved. My research interests include economic development, terrorism, education, e-governance, and migration. My research work focuses on the impact evaluation of large-scale socioeconomic programs in developing countries. I utilize econometric models along with extensive fieldwork to establish causal relationships and address research questions.</p>
+        </section>
 
-    <section>
-        <h2>Contact</h2>
-        <div class="contact">
-            <p>You can reach out to me through the following platforms:</p>
+        <!-- Education -->
+        <section class="education section">
+            <h2>Education</h2>
+            <p><strong>Ph.D. Public Policy</strong>, KDI School of Public Policy and Management <span class="date">Enrolled</span></p>
+            <p><strong>M.S. Public Policy</strong>, KDI School of Public Policy and Management <span class="date"><a href="https://drive.google.com/file/d/1rP96x4wFgnNuvXyFuvqUmB_IGJcO3MQb/view?usp=sharing">2021</a></span></p>
+            <p><strong>M.S. Management Sciences</strong>, COMSATS University Islamabad <span class="date"><a href="https://drive.google.com/file/d/13-P2kF_UYBl2rJEgrRiuHXraK_2Jzw5O/view?usp=sharing">2020</a></span></p>
+            <p><strong>B.S. Public Administration</strong>, COMSATS University Islamabad <span class="date"><a href="https://drive.google.com/file/d/1o1x1lPsYmZjj99z_WWVY566LKZFDFcK6/view?usp=sharing">2018</a></span></p>
+        </section>
+
+        <!-- Employment -->
+        <section class="employment section">
+            <h2>Employment</h2>
+            <div class="subsection">
+                <h3>Full Time Positions</h3>
+                <p><strong>Development Policy Expert</strong>, <a href="https://www.worldbank.org/en/about/unit/unit-dec/impactevaluation/ai/impact-ai">DIME Artificial Intelligence</a> - The World Bank <span class="date">2023-Current</span></p>
+                <p><strong>Research Associate</strong>, <a href="https://pide.org.pk/">Pakistan Institute of Development Economics (PIDE)</a> <span class="date">2022-2023</span></p>
+                <p><strong>Head of Accounts Department</strong>, <a href="https://cch.edu.pk/">Cadet College Hasanabdal (CCH)</a> <span class="date">2016-2022</span></p>
+            </div>
+
+            <div class="subsection">
+                <h3>Part Time Positions</h3>
+                <p><strong>Research Assistant</strong> with <a href="https://sites.google.com/site/chungeunyoon/">Prof. Chungeun</a>, KDI School of Public Policy <span class="date">2024-Current</span></p>
+                <p><strong>Research Associate</strong> with <a href="https://www.inayat.pro/">Prof. Inayat</a>, KDI School of Public Policy <span class="date">2020</span></p>
+                <p><strong>Data Analyst</strong> with <a href="http://ww2.comsats.edu.pk/faculty/FacultyDetails.aspx?Uid=18975">Prof. Saddam</a>, COMSATS University Islamabad <span class="date">2019</span></p>
+            </div>
+        </section>
+
+        <!-- Teaching Experience -->
+        <section class="teaching-experience section">
+            <h2>Teaching Experience</h2>
             <ul>
-                <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-                <li><a href="mailto:youremail@example.com" target="_blank">Email</a></li>
-                <li><a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a></li>
+                <li><strong>Instructor</strong>, Stata Workshops, KDI School <span class="date">2023-Current</span></li>
+                <li><strong>Teaching Assistant</strong>, Development Economics: Labor and Development, KDI School <span class="date">Fall 2024</span></li>
+                <li><strong>Teaching Assistant</strong>, Advanced Impact Evaluation Methods, KDI School <span class="date">Fall 2024</span></li>
+                <li><strong>Teaching Assistant</strong>, Quantitative Methods, KDI School <span class="date">Spring 2024</span></li>
+                <li><strong>Instructor</strong>, Essential Skills for Research, PIDE <span class="date">Fall 2022</span></li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <p>&copy; 2025 Saqib. All rights reserved.</p>
-    </footer>
+        <!-- Awards -->
+        <section class="awards section">
+            <h2>Awards</h2>
+            <ul>
+                <li><strong>Honorable Mention</strong> at 2024 ADB-IEA Innovative Policy Research Award <span class="date">Distinction</span></li>
+                <li><strong>Outstanding Master Thesis</strong>, KDI School <span class="date">Distinction</span></li>
+                <li><strong>Impact of Punjab Land Record MIS on Land Related Corruption</strong>, PIDE, USD 10K (PI) <span class="date">Research Grant</span></li>
+                <li><strong>Improving Displaced Livelihoods of Afghans</strong>, SurveyCTO, USD 2K (PI) <span class="date">Research Grant</span></li>
+                <li><strong>Impact of Punjab Land Record MIS on Dispute Resolution</strong>, KDI School, USD 20K (Co-PI) <span class="date">Research Grant</span></li>
+                <li><strong>Parents' Perception of Afghan Refugees towards Education</strong>, NUST, USD 2.5K (Co-PI) <span class="date">Research Grant</span></li>
+            </ul>
+        </section>
 
+        <!-- Certifications -->
+        <section class="certifications section">
+            <h2>Certifications</h2>
+            <ul>
+                <li><strong>Information Technology</strong> (1 year) - Punjab Board of Technical Education <a href="https://drive.google.com/file/d/1XSdHrpHjoPZNh9XKLiBtYUOYtnemd1kJ/view?usp=sharing">Diploma</a></li>
+                <li><strong>Impact AI</strong> - DIME (3 months) -- World Bank <a href="https://drive.google.com/file/d/1KrpvR519fZMCZZ8Yr5g7rRaEuNGbIi9O/view?usp=sharing">Internship</a></li>
+                <li><strong>Planning for Monitoring and Evaluation</strong> - Haas School of Business <a href="https://drive.google.com/file/d/1WSMLHfF8gDnsKPbCaLA0LnRBAdpeOLfd/view?usp=sharing">Certification</a></li>
+            </ul>
+        </section>
+
+        <!-- Conferences -->
+        <section class="conferences section">
+            <h2>Conferences</h2>
+            <ul>
+                <li><strong>The 2025 World Congress of the Econometric Society (ESWC 2025)</strong> - Seoul <span class="date">Scheduled</span></li>
+                <li><strong>The Society for the Study of Economic Inequality (ECINEQ)</strong> - D.C. <span class="date">Scheduled</span></li>
+                <li><strong>International Association for Applied Econometrics (IAAE)</strong> - Università di Torino <span class="date">Scheduled</span></li>
+            </ul>
+        </section>
+
+        <!-- References -->
+        <section class="references section">
+            <h2>References</h2>
+            <p><strong><a href="https://www.inayat.pro/">ULLAH, Inayat</a></strong>, Professor, National University of Science & Technology, Pakistan <span class="date">inayat@s3h.nust.edu.pk</span></p>
+            <p><strong><a href="https://www.kdischool.ac.kr/faculty/view.es?mid=a10401010000&type=1&page=4&emp_no=311000307">YOON, Chungeun</a></strong>, Professor, KDI School of Public Policy and Management <span class="date">cyoon@kdis.ac.kr</span></p>
+            <p><strong><a href="https://dshpark.com/">PARK, David Sungho</a></strong>, Professor, KDI School of Public Policy and Management <span class="date">park@kdis.ac.kr</span></p>
+        </section>
+    </div>
 </body>
-
 </html>
