@@ -64,21 +64,69 @@
             font-family: 'Playfair Display', serif;  
                   font-family: 'Playfair Display', serif; 
     }
-    .image-holder {
-      width: 40%;
-      height: 428px;  /* Fixed height for image */
-      background-color: #ccc;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-    .image-holder img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+
+
+
+
+
+
+.image-holder {
+  width: 40%;
+  height: 428px;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Elegant gradient */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 6px; /* Subtle round corners */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.image-holder::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+  animation: pulse 6s infinite linear;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px; /* Match container */
+  transition: transform 0.6s ease, filter 0.6s ease;
+  position: relative;
+  z-index: 1;
+  filter: brightness(96%) contrast(106%) saturate(120%);
+}
+
+.image-holder:hover img {
+  transform: scale(1.05);
+  filter: brightness(102%) contrast(112%) saturate(135%);
+}
+
+
+
+
+
+
+
+
+
+    
     footer {
       text-align: center;
       padding: 2rem;
@@ -132,20 +180,26 @@ nav a {
   transition: color 0.3s ease;
   animation: fadeSlideIn 0.6s ease forwards;
   opacity: 0; /* Start hidden for animation */
+  font-family: 'Playfair Display', serif;  
 }
 
 /* Underline animation */
-nav a::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: #999; /* Lighter gray underline */
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
+
+
+  /* Animated underline effect */
+ nav   a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: rgb(59, 68, 74);
+      bottom: -3px;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+      font-family: 'Playfair Display', serif;  
+    }
 
 /* Hover effects */
 nav a:hover {
@@ -161,41 +215,98 @@ nav a.active::after {
 /* Optional: stagger animation for each link if you use JS or SCSS */
 
 
-
-
-  </style>
-
-  
-</head>
-
-
-
-
-
-
-<body>
-  <header>
-  <h1>Saqib Hussain</h1>
-
-  </header>
-  <div class="gray-line"></div>
-  <nav>
-    <a href="index.html">About</a>
-    <a href="experience.html">Experience & Education</a>
-    <a href="research.html">Research</a>
-    <a href="photography.html">Photography</a>
-    <a href="resources.html">Resources</a>
-  </nav>
-  <div class="gray-line"></div>
-  <section>
-    <div class="bio-text">
-      <h2>About Me</h2>
-      <p>Hello! I'm Saqib, I am interested in development economics, which addresses how the livelihoods of vulnerable populations can be improved. My research interests include economic development, terrorism, education, e-governance, and migration. My research work focuses on the impact evaluation of large-scale socioeconomic programs in developing countries. I utilize econometric models along with extensive fieldwork to establish causal relationships and address research questions.</p>
-      <!-- Button to expand bio -->
-      <meta charset="UTF-8">
+ <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minimal Button Design</title>
+  <title>Custom Cursor with Transparent Shadow</title>
   <style>
+    body {
+      cursor: none; /* Remove default cursor */
+    }
+
+    /* Create a custom cursor with transparent shadow */
+.cursor {
+  position: absolute;
+  width: 180px; /* Slightly smaller to give a smoother feel */
+  height: 180px;
+  border-radius: 50%; /* Perfect circle for smoothness */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease-out, background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(128, 128, 128, 0.025); /* Very dim grey with 95% transparency */
+  box-shadow: 0 0 200px rgba(128, 128, 128, 0.025); /* Larger, subtle glow around the edges */
+  z-index: 9999; /* Ensures the cursor is always on top */
+}
+
+.cursor:hover {
+  background-color: rgba(128, 128, 128, 0.025); /* Subtle color change on hover */
+  box-shadow: 0 0 300px rgba(128, 128, 128, 0.025); /* Glow effect intensifies on hover */
+}
+
+
+
+
+
+
+
+
+ <title>Animated Link Example</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;  
+      background-color: #f8f7fc;
+      color: #333;
+      padding: 40px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: rgb(69, 155, 232);
+      text-decoration: none;
+      position: relative;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      font-family: 'Playfair Display', serif;  
+    }
+
+    /* Animated underline effect */
+    a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: rgb(76, 156, 205);
+      bottom: -3px;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+      font-family: 'Playfair Display', serif;  
+    }
+
+    a:hover {
+      color: rgb(99, 155, 246);
+      font-family: 'Playfair Display', serif;  
+    }
+
+    a:hover::after {
+      transform: scaleX(1);
+      font-family: 'Playfair Display', serif;  
+    }
+
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      font-family: 'Playfair Display', serif;  
+    }
+
+
+
     .expand-btn {
       background-color: transparent;
       color: #000;
@@ -219,7 +330,83 @@ nav a.active::after {
     .expand-btn:focus {
       outline: none;
     }
+
+
+body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      margin: 0;
+      padding: 10px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+    }
+
+    
   </style>
+
+
+
+
+
+
+
+
+
+  
+</head>
+
+
+
+
+
+
+<body>
+  <header>
+
+  <h1>Saqib Hussain</h1>
+      
+  </header>
+  <div class="gray-line"></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="experience.html">CV</a>
+    <a href="research.html">Research</a>
+    <a href="resources.html">Resources</a>
+    <a href="more.html">More</a>
+  </nav>
+  <div class="gray-line"></div>
+  <div style="height: 30px;"></div>
+  <section>
+    <div class="bio-text">
+<p>
+  <a href="https://www.worldbank.org" target="_blank">World Bank</a> |
+  <a href="https://www.kdischool.ac.kr" target="_blank">KDI School</a>
+</p>
+
+      <p>  I'm a Development Policy Expert at the World Bank and a Ph.D. student at KDI School of Public Policy and Management.</p>
+       <p> I am interested in development economics, which addresses how the livelihoods of vulnerable populations can be improved.</p>
+      <!-- Button to expand bio -->
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal Button Design</title>
+
 </head>
 <body>
   <button class="expand-btn" onclick="toggleBio()">Full</button>
@@ -232,7 +419,7 @@ nav a.active::after {
   </script>
       <!-- Hidden extra bio text -->
       <div class="extra-bio">
-        <p>In addition to my academic work, I am passionate about using technology and data science to improve policy design and implementation. I collaborate with various international organizations, governments, and NGOs to conduct field experiments that address key issues in education, healthcare, and poverty alleviation. In my free time, I enjoy photography, hiking, and exploring the latest trends in technology.</p>
+        <p>My research interests include economic development, terrorism, education, e-governance, and migration. My research work focuses on the impact evaluation of large-scale socioeconomic programs in developing countries. I utilize econometric models along with extensive fieldwork to establish causal relationships and address research questions.</p>
       </div>
     </div>
     <!-- Image holder with the actual image -->
@@ -240,8 +427,52 @@ nav a.active::after {
       <img src="saqib_pic.png" alt="Saqib Image" />
     </div>
   </section>
+
+
+
+
+
+
+
+
+
+
+
+
   <footer>
-    <p>© 2025 Saqib. All rights reserved.</p>
+
+
+
+<div class="button-container">
+    <!-- Email Button with Tooltip -->
+    <button class="expand-btn" onclick="window.location.href='mailto:saqibhussain@kdis.ac.kr'" title="saqibhussain@kdis.ac.kr">
+        Email
+    </button>
+
+    <!-- Address Button with Tooltip -->
+    <button class="expand-btn" onclick="window.location.href='https://maps.app.goo.gl/zDxAJaA939LqiRXHA'" title="Room 2309, Dorm 102, KDI School, 249 Sejong (30149), South Korea ">
+        Address
+    </button>
+
+    <!-- Phone Button with Tooltip -->
+    <button class="expand-btn" onclick="window.location.href='tel:+821028256558'" title="temp: +8210-2825-6558; fixed: +9231-1517-6964">
+        Phone
+    </button>
+
+    <!-- Other Links -->
+    <button class="expand-btn" onclick="window.location.href='https://www.linkedin.com/in/meetsaqib/'" title="LinkedIn">
+        LinkedIn
+    </button>
+    <button class="expand-btn" onclick="window.location.href='https://orcid.org/my-orcid?orcid=0000-0001-9232-8262'" title="ORCID">
+        ORCID
+    </button>
+    <button class="expand-btn" onclick="window.location.href='https://scholar.google.com/citations?user=ISLPJjgAAAAJ&hl=en'" title="Visit Google Scholar">
+        Scholar
+    </button>
+</div>
+
+
+    <!-- <p>© 2025 Saqib. All rights reserved.</p> -->
   </footer>
 
   <script>
@@ -270,6 +501,25 @@ nav a.active::after {
     });
   });
 </script>
+
+
+
+
+<div class="cursor"></div>
+
+  <script>
+    const cursor = document.querySelector('.cursor');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.pageX}px`;
+      cursor.style.top = `${e.pageY}px`;
+    });
+  </script>
+
+
+
+
+
 
 
 
