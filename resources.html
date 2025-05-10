@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resources | Saqib</title>
+  <title>Research | Saqib</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
       background-color: white;
       color: black;
+      font-family: 'Playfair Display', serif;  
     }
     header {
       text-align: center;
       padding: 2rem;
+      font-family: 'Playfair Display', serif;  
     }
     .gray-line {
       width: 70%;
@@ -24,67 +26,626 @@
     nav {
       text-align: center;
       margin: 1rem 0;
+      font-family: 'Playfair Display', serif;  
     }
     nav a {
       margin: 0 1.5rem;
       text-decoration: none;
       color: black;
       font-weight: bold;
+      font-family: 'Playfair Display', serif;  
     }
+
+    nav {
+      text-align: center;
+      margin: 1rem 0;
+      font-family: 'Playfair Display', serif;  
+    }
+
     section {
       max-width: 800px;
       margin: 2rem auto;
       padding: 0 1rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      font-family: 'Playfair Display', serif;  
     }
+
     h2 {
       font-size: 1.8rem;
       border-bottom: 1px solid black;
       padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
+      font-family: 'Playfair Display', serif;  
     }
-    ul {
-      line-height: 1.8;
+    .bio-text {
+      flex: 1;
+      margin-right: 2rem;
+            font-family: 'Playfair Display', serif;  
+                  font-family: 'Playfair Display', serif; 
     }
-    a {
-      color: black;
-      text-decoration: underline;
-    }
-    a:hover {
-      color: gray;
-    }
+
+
+
+
+
+
+.image-holder {
+  width: 40%;
+  height: 428px;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Elegant gradient */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 6px; /* Subtle round corners */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.image-holder::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+  animation: pulse 6s infinite linear;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px; /* Match container */
+  transition: transform 0.6s ease, filter 0.6s ease;
+  position: relative;
+  z-index: 1;
+  filter: brightness(96%) contrast(106%) saturate(120%);
+}
+
+.image-holder:hover img {
+  transform: scale(1.05);
+  filter: brightness(102%) contrast(112%) saturate(135%);
+}
+
+
+
+
+
+
+
+
+
+    
     footer {
       text-align: center;
       padding: 2rem;
       color: #444;
+      
     }
+    .extra-bio {
+      display: none;
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #444;
+      font-family: 'Playfair Display', serif;  
+    }
+    .expand-btn {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: .75rem;
+      margin-top: .75rem;
+      font-family: 'Playfair Display', serif;  
+    }
+    .expand-btn:hover {
+      background-color: #444;
+    }
+
+
+/* Keyframe animation for entry */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 6px 0;
+  color: #444; /* Balanced gray */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  animation: fadeSlideIn 0.6s ease forwards;
+  opacity: 0; /* Start hidden for animation */
+  font-family: 'Playfair Display', serif;  
+}
+
+/* Underline animation */
+
+
+  /* Animated underline effect */
+ nav   a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: rgb(59, 68, 74);
+      bottom: -3px;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+      font-family: 'Playfair Display', serif;  
+    }
+
+/* Hover effects */
+nav a:hover {
+  color: #111; /* Dark gray on hover */
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+  background-color: #222; /* Darker underline for active/hover */
+}
+
+
+      .nav ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .nav ul li {
+            margin-bottom: 20px;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+
+
+
+/* Optional: stagger animation for each link if you use JS or SCSS */
+
+
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Cursor with Transparent Shadow</title>
+  <style>
+    body {
+      cursor: none; /* Remove default cursor */
+    }
+
+    /* Create a custom cursor with transparent shadow */
+.cursor {
+  position: absolute;
+  width: 180px; /* Slightly smaller to give a smoother feel */
+  height: 180px;
+  border-radius: 50%; /* Perfect circle for smoothness */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease-out, background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(128, 128, 128, 0.025); /* Very dim grey with 95% transparency */
+  box-shadow: 0 0 200px rgba(128, 128, 128, 0.025); /* Larger, subtle glow around the edges */
+  z-index: 9999; /* Ensures the cursor is always on top */
+}
+
+.cursor:hover {
+  background-color: rgba(128, 128, 128, 0.025); /* Subtle color change on hover */
+  box-shadow: 0 0 300px rgba(128, 128, 128, 0.025); /* Glow effect intensifies on hover */
+}
+
+
+
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;  
+      background-color: #f8f7fc;
+      color: #333;
+      padding: 40px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: rgb(69, 155, 232);
+      text-decoration: none;
+      position: relative;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      font-family: 'Playfair Display', serif;  
+    }
+
+    /* Animated underline effect */
+    a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: rgb(76, 156, 205);
+      bottom: -3px;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+      font-family: 'Playfair Display', serif;  
+    }
+
+    a:hover {
+      color: rgb(99, 155, 246);
+      font-family: 'Playfair Display', serif;  
+    }
+
+    a:hover::after {
+      transform: scaleX(1);
+      font-family: 'Playfair Display', serif;  
+    }
+
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      font-family: 'Playfair Display', serif;  
+    }
+
+
+
+    .expand-btn {
+      background-color: transparent;
+      color: #000;
+      border: 1px solid #000;
+      padding: 5px 15px;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .expand-btn:hover {
+      background-color: #000;
+      color: #fff;
+      border-color: #fff;
+    }
+
+    .expand-btn:focus {
+      outline: none;
+    }
+
+
+
+        .paper {
+            background-color: #ffffff00;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .paper h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .paper p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+    
+
+.abstract-box {
+    display: none;
+    margin-top: 2em;
+    padding: 1.25em 1.5em;
+    background: #f7f7f7;
+    color: #2e2e2e;
+    font-size: 15px;
+    line-height: 1.6;
+    font-family: 'Playfair Display', serif;
+    border-left: 2px solid #b0b0b0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease-in-out;
+    text-align: justify; /* Added this line */
+}
+
+    .abstract-box.show {
+        display: block;
+        animation: fadeIn 0.4s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(6px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+
+/* .abstract-box {
+    display: none;
+    margin-top: 1em;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+      font-family: 'Playfair Display', serif;  
+
+} */
+
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+
+/* .paper-title {
+      font-weight: normal;
+      font-style: normal;
+      font-size: 16px;
+      font-family: 'Playfair Display', serif;  
+    } */
+.paper-title {
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;  
+  color: #2c3e50; /* Darker, elegant color */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+  letter-spacing: 0.5px; /* Slight spacing to improve readability */
+  /* animation: pulseGlow 2.5s ease-in-out infinite; */
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2), 0 0 5px rgba(44, 62, 80, 0.3);
+  }
+  50% {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3), 0 0 10px rgba(44, 62, 80, 0.5);
+  }
+}
+
+
+    /* .journal-name {
+      font-weight: bold;
+      font-style: italic;
+      font-size: 16px;
+      font-family: 'Playfair Display', serif;  
+    } */
+
+.journal-name {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;  
+  color: #2c3e50; /* Darker, elegant color */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+  letter-spacing: 0.5px; /* Slight spacing to improve readability */
+  /* animation: pulseGlow 2.5s ease-in-out infinite; */
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2), 0 0 5px rgba(44, 62, 80, 0.3);
+  }
+  50% {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3), 0 0 10px rgba(44, 62, 80, 0.5);
+  }
+}
+
+
+
+
+
+body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      margin: 0;
+      padding: 10px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+    }
+
+
+
+
+
   </style>
+
+
+
+
+
+
+
+
+
+  
 </head>
+
+
+
+
+
+
 <body>
   <header>
-    <h1>Saqib</h1>
-    <p>Web Developer | Designer | Tech Enthusiast</p>
+
+  <h1>Saqib Hussain</h1>
+      
   </header>
   <div class="gray-line"></div>
   <nav>
-    <a href="index.html">About</a>
-    <a href="experience.html">Experience & Education</a>
+    <a href="index.html">Home</a>
+    <a href="experience.html">CV</a>
     <a href="research.html">Research</a>
-    <a href="photography.html">Photography</a>
     <a href="resources.html">Resources</a>
+    <a href="more.html">More</a>
   </nav>
   <div class="gray-line"></div>
+  <div style="height: 30px;"></div>
   <section>
-    <h2>Resources</h2>
-    <ul>
-      <li><a href="https://developer.mozilla.org/">MDN Web Docs</a> – My go-to reference for web standards</li>
-      <li><a href="https://github.com/">GitHub</a> – Where I host and collaborate on projects</li>
-      <li><a href="https://fonts.google.com/">Google Fonts</a> – Typography resources I use</li>
-      <li><a href="https://www.canva.com/">Canva</a> – For designing lightweight graphics</li>
-      <li><a href="/resume.pdf" download>Download My Resume (PDF)</a></li>
-    </ul>
-  </section>
-  <footer>
-    <p>© 2025 Saqib. All rights reserved.</p>
-  </footer>
+
+</head>
+<body>
+
+
+<div class="content">
+                      <div class="journal-name">Economics of Crime Research</div>
+                      <div class="button-container">
+                            <button class="expand-btn" onclick="openLink('https://docs.google.com/spreadsheets/d/1zyRB708QpsxG_8vNCRl7gv5FyrPE81w3mF_kMVJlHbY/edit?gid=686724554#gid=686724554')">Link</button>
+                            <!-- <button class="expand-btn" onclick="openPDF('pp_lup.pdf')">PDF</button> -->
+                            <button class="expand-btn" onclick="toggleAbstract('crime_research')">Description</button>
+                        </div>
+                    <div id="crime_research" class="abstract-box">
+                        This dataset is a curated compilation of economics research papers focused on crime and terrorism, consisting of publications from leading general interest and top field economics journals. It is organized to provide both an overview—summarizing the number of crime-related papers published per journal and year—and detailed bibliographic entries for each paper, including title, authors, journal, and publication link. The dataset covers a wide array of topics such as policing, judicial decision-making, sentencing, recidivism, domestic violence, drug policy, organized crime, immigration and crime, socioeconomic determinants of criminal behavior, public policy impacts, and disparities within the justice system. (Source: <a href="https://jenniferdoleac.com/">Jennifer Doleac</a>)                   </div>
+                </div>   <div style="height: 30px;"></div>
+
+</div>
+      
+ 
+
+    <script>
+        // Function to scroll to the selected section
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Highlight the current section based on scroll position
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav ul li button');
+
+            sections.forEach((section, index) => {
+                if (isInViewport(section)) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    navLinks[index].classList.add('active');
+                }
+            });
+        });
+
+        // Check if the section is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top >= 0 && rect.bottom <= window.innerHeight;
+        }
+
+        // Sample functions for opening links and PDFs (just placeholders)
+        function openLink(url) {
+            window.open(url, '_blank');
+        }
+
+        function openPDF(url) {
+            window.open(url, '_blank');
+        }
+
+        function toggleAbstract(abstractId) {
+            const abstract = document.getElementById(abstractId);
+            abstract.style.display = abstract.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll("nav a");
+    const currentPage = location.pathname.split("/").pop();
+
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+
+
+
+<div class="cursor"></div>
+
+  <script>
+    const cursor = document.querySelector('.cursor');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.pageX}px`;
+      cursor.style.top = `${e.pageY}px`;
+    });
+  </script>
+
+
+
+
+
+
+
+
 </body>
 </html>
