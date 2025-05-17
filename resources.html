@@ -462,38 +462,10 @@ nav a.active::after {
 
 
 
-body {
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      margin: 0;
-      padding: 10px;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .container {
-      width: 100%;
-      padding: 10px;
-      box-sizing: border-box;
-    }
-
-    @media (min-width: 768px) {
-      .container {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-      }
-    }
-
-
 
 
 
   </style>
-
 
 
 
@@ -531,21 +503,68 @@ body {
 </head>
 <body>
 
+<div class="content-wrapper">
 
-<div class="content">
-                      <div class="journal-name">Economics of Crime Research</div>
-                      <div class="button-container">
-                            <button class="expand-btn" onclick="openLink('https://docs.google.com/spreadsheets/d/1zyRB708QpsxG_8vNCRl7gv5FyrPE81w3mF_kMVJlHbY/edit?gid=686724554#gid=686724554')">Link</button>
-                            <!-- <button class="expand-btn" onclick="openPDF('pp_lup.pdf')">PDF</button> -->
-                            <button class="expand-btn" onclick="toggleAbstract('crime_research')">Description</button>
-                        </div>
-                    <div id="crime_research" class="abstract-box">
-                        This dataset is a curated compilation of economics research papers focused on crime and terrorism, consisting of publications from leading general interest and top field economics journals. It is organized to provide both an overview—summarizing the number of crime-related papers published per journal and year—and detailed bibliographic entries for each paper, including title, authors, journal, and publication link. The dataset covers a wide array of topics such as policing, judicial decision-making, sentencing, recidivism, domestic violence, drug policy, organized crime, immigration and crime, socioeconomic determinants of criminal behavior, public policy impacts, and disparities within the justice system. (Source: <a href="https://jenniferdoleac.com/">Jennifer Doleac</a>)                   </div>
-                </div>   <div style="height: 30px;"></div>
+  <div class="content">
+    <div class="journal-name">Economics of Crime Research</div>
+    <div class="button-container">
+      <button class="expand-btn" onclick="openLink('https://docs.google.com/spreadsheets/d/1zyRB708QpsxG_8vNCRl7gv5FyrPE81w3mF_kMVJlHbY/edit?usp=sharing')">Link</button>
+      <button class="expand-btn" onclick="toggleAbstract('crime_research')">Description</button>
+    </div>
+    <div id="crime_research" class="abstract-box">
+      This base compiled a list of crime-related papers published in economics journals. (Source: <a href="https://jenniferdoleac.com/">Jennifer Doleac</a>)
+    </div>
+  </div>
+  
+  <div style="height: 30px;"></div>
+
+  <div class="content">
+    <div class="journal-name">Economics Conferences</div>
+    <div class="button-container">
+      <button class="expand-btn" onclick="openLink('https://docs.google.com/spreadsheets/d/1OjCncG_88aasdZtdekfCfOxANuyNFYG0Vhu7hB_3vbk/edit?gid=1917127099#gid=1917127099')">Link</button>
+      <button class="expand-btn" onclick="toggleAbstract('economics_conferences')">Description</button>
+    </div>
+    <div id="economics_conferences" class="abstract-box">
+      This base compiled a non-exhaustive list of Econ conferences with submission deadlines, conference dates, locations, etc. (Source: <a href="https://annemburton.com/">Anne M. Burton</a> and <a href="https://www.bartonwillage.com/">Barton Willage</a>)
+    </div>
+  </div>
+
+
+
+   <div style="height: 30px;"></div>
+
+  <div class="content">
+    <div class="journal-name">Grants for Graduate Students</div>
+    <div class="button-container">
+      <button class="expand-btn" onclick="openLink('https://docs.google.com/spreadsheets/d/17UlG3Er7MD1EajGIyiiI-adCw77RfWTkFeU9kpp2-zI/edit?gid=0#gid=0')">Link</button>
+      <button class="expand-btn" onclick="toggleAbstract('graduate_grants')">Description</button>
+    </div>
+    <div id="graduate_grants" class="abstract-box">
+      The document is an ever-evolving google spreadsheet of small grants that are ideal for graduate students in economics and related fields. (Source: <a href="https://www.econanne.com/">Anne T. Byrne</a>)
+    </div>
+  </div>
+  
+    <div style="height: 30px;"></div>
+
+  <div class="content">
+    <div class="journal-name">Data to Viz</div>
+    <div class="button-container">
+      <button class="expand-btn" onclick="openLink('https://www.data-to-viz.com/#explore')">Link</button>
+      <button class="expand-btn" onclick="toggleAbstract('data_viz')">Description</button>
+    </div>
+    <div id="data_viz" class="abstract-box">
+      From Data to Viz is a classification of chart types based on input data format. It comes in the form of a decision tree leading to a set of potentially appropriate visualizations to represent the dataset. (Source: <a href="https://www.linkedin.com/in/yan-holtz-2477534a/">Yan Holtz</a> and <a href="https://conorhealy.sumupstore.com/">Conor Healy</a>)
+    </div>
+  </div>
+  
+  
+
 
 </div>
+
       
- 
+
+
 
     <script>
         // Function to scroll to the selected section

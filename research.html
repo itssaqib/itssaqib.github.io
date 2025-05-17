@@ -490,6 +490,74 @@ body {
 
 
 
+h1.animated-underline {
+    position: relative;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #1f2327;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+  }
+
+  h1.animated-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: #1f2327;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: underline-slide 1s forwards ease-in-out;
+  }
+
+  @keyframes underline-slide {
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+
+
+
+
+  
+
+
+       :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+    }
+
+    .dark-theme {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+      padding: 2rem;
+    }
+
+    .theme-toggle-btn {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--text-color);
+      transition: color 0.3s;
+    }
+
+    .theme-toggle-btn:hover {
+      opacity: 0.7;
+    }
+
+
+
 
 
   </style>
@@ -537,7 +605,7 @@ body {
         <div class="content">
             <!-- Published Papers Section -->
             <div class="section" id="published">
-                <h1>Peer Reviewed</h1>
+                  <h1 class="animated-underline">Peer Reviewed</h1>
 
                 
                 <div class="paper-title">
@@ -597,7 +665,7 @@ body {
                     </div>   <div style="height: 30px;"></div>
 
                 <div class="paper-title">
-                    Review of The Quality ofLife and Policy Issues Among the Middle East and North African Countries
+                    Review of The Quality of Life and Policy Issues Among the Middle East and North African Countries
                    </div>                     <div class="journal-name">Journal of Business Ethics, 2020</div>
                         <div class="button-container">
                             <button class="expand-btn" onclick="openLink('https://link.springer.com/article/10.1007/s10551-019-04334-1')">Link</button>
@@ -613,12 +681,12 @@ body {
 
             <!-- Other Publications -->
             <div class="section" id="published">
-                <h1>Working Papers</h1>
+                  <h1 class="animated-underline">Working Papers</h1>
 
 
                 <div class="paper-title">
                     The Impact of Terrorism on Education: Evidence from the Death of Osama bin Laden in Pakistan  </div>                     
-                        <div class="journal-name">Under Review</div>
+                        <div class="journal-name">R&R - Labour Economics</div>
                         <div class="button-container">
                             <!-- <button class="expand-btn" onclick="openLink('link')">Link</button> -->
                             <!-- <button class="expand-btn" onclick="openPDF('name_pdf.pdf')">PDF</button> -->
@@ -630,7 +698,7 @@ body {
 
                 <div class="paper-title">
                     Terror and Trust </div>                     
-                        <!-- <div class="journal-name">Under Review</div> -->
+                        <div class="journal-name">Under Review</div>
                         <div class="button-container">
                             <!-- <button class="expand-btn" onclick="openLink('link')">Link</button> -->
                             <!-- <button class="expand-btn" onclick="openPDF('name_pdf.pdf')">PDF</button> -->
@@ -638,6 +706,19 @@ body {
                         </div>
                     <div id="wr_terror_trust" class="abstract-box">
                         This paper estimates the effect of exposure to terrorist attacks on election outcomes. Since terrorists may choose targets endogenously, I construct a set of novel instruments. To that end, I leverage exogenous variation of the timing and location of the death of Osama bin Laden and the Red Mosque siege. I find that attacks suppress voter turnout by 5 percent and 3 percent more than predicted by difference-in-differences-type estimators. This indicates that terrorists target areas experiencing positive shocks. Using a very unique set of datasets, evidence suggests religious extremism, media exposure, demand for Sharia law, fears, and migration as mechanisms, rather than degradation of electoral infrastructure.  
+                    </div>   <div style="height: 30px;"></div>
+
+
+                <div class="paper-title">
+                    Human Capital Development: Evidence from Natural Disasters and Migration </div>                     
+                        <div class="journal-name">Under Review</div>
+                        <div class="button-container">
+                            <!-- <button class="expand-btn" onclick="openLink('link')">Link</button> -->
+                            <!-- <button class="expand-btn" onclick="openPDF('name_pdf.pdf')">PDF</button> -->
+                            <button class="expand-btn" onclick="toggleAbstract('wr_earthquake')">Abstract</button>
+                        </div>
+                    <div id="wr_earthquake" class="abstract-box">
+                                    This paper uses the 2005 Pakistan earthquake as a natural experiment and the role of migration to estimate its long-term effects on human development. Exposure to the earthquake was plausibly exogenous for individuals born after the disaster. I exploit variation across birth cohorts and districts affected by this event. I find that cohorts exposed to the earthquake represent higher rates of disabilities and lower educational attainment and labor market outcomes. I also find that migration before or immediately after the earthquake can mitigate its impact on disabilities. The effects are more pronounced for cognitive disabilities, girls, and individuals from low-education and low-income households. These findings highlights the importance of migration and investing in affected cohorts to improve long-term human capital   
                     </div>   <div style="height: 30px;"></div>
 
 
@@ -793,6 +874,21 @@ body {
 
 
 
+
+ <script>
+    function toggleTheme() {
+      const body = document.body;
+      const btn = document.getElementById('themeToggle');
+      body.classList.toggle('dark-theme');
+      
+      // Change symbol based on theme
+      if (body.classList.contains('dark-theme')) {
+        btn.textContent = '🌞'; // Light mode symbol
+      } else {
+        btn.textContent = '🌙'; // Dark mode symbol
+      }
+    }
+  </script>
 
 
 

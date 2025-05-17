@@ -333,7 +333,7 @@ nav a.active::after {
 
 
 body {
-      font-family: Arial, sans-serif;
+      font-family: 'Playfair Display', serif;  
       font-size: 16px;
       margin: 0;
       padding: 10px;
@@ -359,6 +359,12 @@ body {
     }
 
     
+
+
+
+
+
+
   </style>
 
 
@@ -378,10 +384,11 @@ body {
 
 
 <body>
+<!-- <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" style="float: right; font-size: 18px; padding: 8px 16px;">🌙</button> -->
+
   <header>
 
   <h1>Saqib Hussain</h1>
-      
   </header>
   <div class="gray-line"></div>
   <nav>
@@ -390,14 +397,15 @@ body {
     <a href="research.html">Research</a>
     <a href="resources.html">Resources</a>
     <a href="more.html">More</a>
+    
   </nav>
   <div class="gray-line"></div>
   <div style="height: 30px;"></div>
   <section>
     <div class="bio-text">
 <p>
-  <a href="https://www.worldbank.org" target="_blank">World Bank</a> |
-  <a href="https://www.kdischool.ac.kr" target="_blank">KDI School</a>
+  <a href="https://impactai.worldbank.org/team" target="_blank">World Bank</a> |
+  <a href="https://www.kdischool.ac.kr/board.es?mid=a10201020200&bid=0022&act=view&list_no=17616&nPage=2&keyField=" target="_blank">KDI School</a>
 </p>
 
       <p>  I'm a Development Policy Expert at the World Bank and a Ph.D. student at KDI School of Public Policy and Management.</p>
@@ -467,8 +475,13 @@ body {
         ORCID
     </button>
     <button class="expand-btn" onclick="window.location.href='https://scholar.google.com/citations?user=ISLPJjgAAAAJ&hl=en'" title="Visit Google Scholar">
-        Scholar
+         Scholar
     </button>
+
+
+  
+
+
 </div>
 
 
@@ -514,12 +527,28 @@ body {
       cursor.style.left = `${e.pageX}px`;
       cursor.style.top = `${e.pageY}px`;
     });
+
+
+
   </script>
 
 
 
 
-
+ <script>
+    function toggleTheme() {
+      const body = document.body;
+      const btn = document.getElementById('themeToggle');
+      body.classList.toggle('dark-theme');
+      
+      // Change symbol based on theme
+      if (body.classList.contains('dark-theme')) {
+        btn.textContent = '🌞'; // Light mode symbol
+      } else {
+        btn.textContent = '🌙'; // Dark mode symbol
+      }
+    }
+  </script>
 
 
 
