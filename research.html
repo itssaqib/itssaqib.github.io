@@ -1,852 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Research | Saqib</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: white;
-      color: black;
-      font-family: 'Playfair Display', serif;  
-    }
-    header {
-      text-align: center;
-      padding: 2rem;
-      font-family: 'Playfair Display', serif;  
-    }
-    .gray-line {
-      width: 70%;
-      height: 1px;
-      background-color: #ccc;
-      margin: 0 auto;
-    }
-    nav {
-      text-align: center;
-      margin: 1rem 0;
-      font-family: 'Playfair Display', serif;  
-    }
-    nav a {
-      margin: 0 1.5rem;
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      font-family: 'Playfair Display', serif;  
-    }
 
-    nav {
-      text-align: center;
-      margin: 1rem 0;
-      font-family: 'Playfair Display', serif;  
-    }
-
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      font-family: 'Playfair Display', serif;  
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      border-bottom: 1px solid black;
-      padding-bottom: 0.5rem;
-      font-family: 'Playfair Display', serif;  
-    }
-    .bio-text {
-      flex: 1;
-      margin-right: 2rem;
-            font-family: 'Playfair Display', serif;  
-                  font-family: 'Playfair Display', serif; 
-    }
-
-
-
-
-
-
-.image-holder {
-  width: 40%;
-  height: 428px;
-  background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Elegant gradient */
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 6px; /* Subtle round corners */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  position: relative;
-  transition: all 0.4s ease;
-}
-
-.image-holder::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
-  animation: pulse 6s infinite linear;
-  z-index: 0;
-}
-
-@keyframes pulse {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.image-holder img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 6px; /* Match container */
-  transition: transform 0.6s ease, filter 0.6s ease;
-  position: relative;
-  z-index: 1;
-  filter: brightness(96%) contrast(106%) saturate(120%);
-}
-
-.image-holder:hover img {
-  transform: scale(1.05);
-  filter: brightness(102%) contrast(112%) saturate(135%);
-}
-
-
-
-
-
-
-
-
-
-    
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #444;
-      
-    }
-    .extra-bio {
-      display: none;
-      margin-top: 1rem;
-      font-size: 1rem;
-      color: #444;
-      font-family: 'Playfair Display', serif;  
-    }
-    .expand-btn {
-      background-color: black;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-      font-size: .75rem;
-      margin-top: .75rem;
-      font-family: 'Playfair Display', serif;  
-    }
-    .expand-btn:hover {
-      background-color: #444;
-    }
-
-
-/* Keyframe animation for entry */
-@keyframes fadeSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-nav a {
-  position: relative;
-  display: inline-block;
-  margin: 0 1rem;
-  padding: 6px 0;
-  color: #444; /* Balanced gray */
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease;
-  animation: fadeSlideIn 0.6s ease forwards;
-  opacity: 0; /* Start hidden for animation */
-  font-family: 'Playfair Display', serif;  
-}
-
-/* Underline animation */
-
-
-  /* Animated underline effect */
- nav   a::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background-color: rgb(59, 68, 74);
-      bottom: -3px;
-      left: 0;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
-      font-family: 'Playfair Display', serif;  
-    }
-
-/* Hover effects */
-nav a:hover {
-  color: #111; /* Dark gray on hover */
-}
-
-nav a:hover::after,
-nav a.active::after {
-  width: 100%;
-  background-color: #222; /* Darker underline for active/hover */
-}
-
-
-      .nav ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .nav ul li {
-            margin-bottom: 20px;
-            text-align: left;
-            padding-left: 20px;
-        }
-
-
-
-
-/* Optional: stagger animation for each link if you use JS or SCSS */
-
-
- <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Cursor with Transparent Shadow</title>
-  <style>
-    body {
-      cursor: none; /* Remove default cursor */
-    }
-
-    /* Create a custom cursor with transparent shadow */
-.cursor {
-  position: absolute;
-  width: 180px; /* Slightly smaller to give a smoother feel */
-  height: 180px;
-  border-radius: 50%; /* Perfect circle for smoothness */
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: transform 0.2s ease-out, background-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: rgba(128, 128, 128, 0.025); /* Very dim grey with 95% transparency */
-  box-shadow: 0 0 200px rgba(128, 128, 128, 0.025); /* Larger, subtle glow around the edges */
-  z-index: 9999; /* Ensures the cursor is always on top */
-}
-
-.cursor:hover {
-  background-color: rgba(128, 128, 128, 0.025); /* Subtle color change on hover */
-  box-shadow: 0 0 300px rgba(128, 128, 128, 0.025); /* Glow effect intensifies on hover */
-}
-
-
-
-
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Playfair Display', serif;  
-      background-color: #f8f7fc;
-      color: #333;
-      padding: 40px;
-      line-height: 1.6;
-    }
-
-    a {
-      color: rgb(69, 155, 232);
-      text-decoration: none;
-      position: relative;
-      font-weight: 600;
-      transition: color 0.3s ease;
-      font-family: 'Playfair Display', serif;  
-    }
-
-    /* Animated underline effect */
-    a::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background-color: rgb(76, 156, 205);
-      bottom: -3px;
-      left: 0;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
-      font-family: 'Playfair Display', serif;  
-    }
-
-    a:hover {
-      color: rgb(99, 155, 246);
-      font-family: 'Playfair Display', serif;  
-    }
-
-    a:hover::after {
-      transform: scaleX(1);
-      font-family: 'Playfair Display', serif;  
-    }
-
-
-    .container {
-      max-width: 600px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      font-family: 'Playfair Display', serif;  
-    }
-
-
-
-    .expand-btn {
-      background-color: transparent;
-      color: #000;
-      border: 1px solid #000;
-      padding: 5px 15px;
-      font-size: 10px;
-      font-weight: 600;
-      text-transform: uppercase;
-      border-radius: 30px;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      outline: none;
-    }
-
-    .expand-btn:hover {
-      background-color: #000;
-      color: #fff;
-      border-color: #fff;
-    }
-
-    .expand-btn:focus {
-      outline: none;
-    }
-
-
-
-        .paper {
-            background-color: #ffffff00;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-
-        .paper h3 {
-            margin: 0;
-            color: #333;
-        }
-
-        .paper p {
-            margin: 10px 0;
-            color: #666;
-        }
-
-    
-
-.abstract-box {
-    display: none;
-    margin-top: 2em;
-    padding: 1.25em 1.5em;
-    background: #f7f7f7;
-    color: #2e2e2e;
-    font-size: 15px;
-    line-height: 1.6;
-    font-family: 'Playfair Display', serif;
-    border-left: 2px solid #b0b0b0;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-    transition: all 0.3s ease-in-out;
-    text-align: justify; /* Added this line */
-}
-
-    .abstract-box.show {
-        display: block;
-        animation: fadeIn 0.4s ease-out forwards;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(6px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-
-/* .abstract-box {
-    display: none;
-    margin-top: 1em;
-    color: #333;
-    font-size: 14px;
-    line-height: 1.5;
-      font-family: 'Playfair Display', serif;  
-
-} */
-
-
-        /* Smooth scroll behavior */
-        html {
-            scroll-behavior: smooth;
-        }
-
-
-
-/* .paper-title {
-      font-weight: normal;
-      font-style: normal;
-      font-size: 16px;
-      font-family: 'Playfair Display', serif;  
-    } */
-.paper-title {
-  font-size: 16px;
-  font-family: 'Playfair Display', serif;  
-  color: #2c3e50; /* Darker, elegant color */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Subtle shadow for depth */
-  letter-spacing: 0.5px; /* Slight spacing to improve readability */
-  /* animation: pulseGlow 2.5s ease-in-out infinite; */
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2), 0 0 5px rgba(44, 62, 80, 0.3);
-  }
-  50% {
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3), 0 0 10px rgba(44, 62, 80, 0.5);
-  }
-}
-
-
-    /* .journal-name {
-      font-weight: bold;
-      font-style: italic;
-      font-size: 16px;
-      font-family: 'Playfair Display', serif;  
-    } */
-
-.journal-name {
-  font-weight: bold;
-  font-size: 16px;
-  font-family: 'Playfair Display', serif;  
-  color: #2c3e50; /* Darker, elegant color */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Subtle shadow for depth */
-  letter-spacing: 0.5px; /* Slight spacing to improve readability */
-  /* animation: pulseGlow 2.5s ease-in-out infinite; */
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2), 0 0 5px rgba(44, 62, 80, 0.3);
-  }
-  50% {
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3), 0 0 10px rgba(44, 62, 80, 0.5);
-  }
-}
-
-
-
-
-
-body {
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      margin: 0;
-      padding: 10px;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .container {
-      width: 100%;
-      padding: 10px;
-      box-sizing: border-box;
-    }
-
-    @media (min-width: 768px) {
-      .container {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-      }
-    }
-
-
-
-h1.animated-underline {
-    position: relative;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #1f2327;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    display: inline-block;
-  }
-
-  h1.animated-underline::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 3px;
-    background: #1f2327;
-    transform: scaleX(0);
-    transform-origin: left;
-    animation: underline-slide 1s forwards ease-in-out;
-  }
-
-  @keyframes underline-slide {
-    to {
-      transform: scaleX(1);
-    }
-  }
-
-
-
-
-
-  
-
-
-       :root {
-      --bg-color: #ffffff;
-      --text-color: #000000;
-    }
-
-    .dark-theme {
-      --bg-color: #121212;
-      --text-color: #ffffff;
-    }
-
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: sans-serif;
-      transition: background-color 0.3s, color 0.3s;
-      padding: 2rem;
-    }
-
-    .theme-toggle-btn {
-      background: none;
-      border: none;
-      font-size: 2rem;
-      cursor: pointer;
-      color: var(--text-color);
-      transition: color 0.3s;
-    }
-
-    .theme-toggle-btn:hover {
-      opacity: 0.7;
-    }
-
-
-
-
-
-  </style>
-
-
-
-
-
-
-
-
-
-  
-</head>
-
-
-
-
-
-
-<body>
-  <header>
-
-  <h1>Saqib Hussain</h1>
-      
-  </header>
-  <div class="gray-line"></div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="experience.html">CV</a>
-    <a href="research.html">Research</a>
-    <a href="resources.html">Resources</a>
-    <a href="more.html">More</a>
-  </nav>
-  <div class="gray-line"></div>
-  <div style="height: 30px;"></div>
-  <section>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+  rel="stylesheet"
+>
+  <!-- Main CSS -->
+  <link href="styles.css" rel="stylesheet">
 
 </head>
 <body>
 
+  <!-- Header placeholder -->
+  <div id="header-placeholder"></div>
 
+  <!-- Custom cursor -->
+  <div class="cursor"></div>
 
-        <!-- Right Side: Content Sections -->
-        <div class="content">
-            <!-- Published Papers Section -->
-            <div class="section" id="published">
-                  <h1 class="animated-underline">Peer Reviewed</h1>
+  <!-- Theme toggle button -->
+  <button id="themeToggle" onclick="toggleTheme()">🌙</button>
 
-                
-                <div class="paper-title">
-                    Impact of Early Access to Land Record Information through Digitization: Evidence from Alternate Dispute Resolution Data in Punjab, Pakistan
-                   </div>                     <div class="journal-name">Land Use Policy, 2023</div>
-                        <div class="button-container">
-                            <button class="expand-btn" onclick="openLink('https://www.sciencedirect.com/science/article/pii/S0264837723003836')">Link</button>
-                            <button class="expand-btn" onclick="openPDF('pp_lup.pdf')">PDF</button>
-                            <button class="expand-btn" onclick="toggleAbstract('pp_lup')">Abstract</button>
-                        </div>
-                    <div id="pp_lup" class="abstract-box">
-                        We leverage novel data extracted from weekly updated registers of Alternate Dispute Resolution (ADR) centres to examine the impact of early access to land record information through digitization on dispute resolution outcomes in the Punjab province of Pakistan. Employing a quasi-experimental design, we estimate the causal effect of early access to Punjab Land Record Management Information System (PLRMIS) on the registration and resolution process of land-related disputes. Our results reveal that ADR centres in districts with early treatment experience an average increase of approximately 50 cases compared to those in districts with late treatment. By utilizing generalized multi-level mixed effect and two-stage least square models, we find that early implementation of PLRMIS significantly increases successful mediation outcomes by 126 cases in the treatment region with no effect on mediation failure cases. These findings provide compelling evidence for the pivotal role of PLRMIS in facilitating effective alternate dispute resolution, indicating increased public utilization of the system. Our results underscore the effectiveness of digitization and e-governance systems in improving land administration, reducing information asymmetry, and expediting the dispute resolution process.
-                    </div>
-                </div>   <div style="height: 30px;"></div>
+  <!-- Main Section -->
+<br><br>
 
-                
-                <div class="paper-title">
-                    Sustainable Leadership and Environment: An Empirical Study in Organizational Context
-                   </div>                     <div class="journal-name">NUST Journal of Social Sciences and Humanities, 2023</div>
-                        <div class="button-container">
-                            <button class="expand-btn" onclick="openLink('https://pide.org.pk/research/what-are-the-factors-making-pakistans-exports-stagnant-insight-from-literature-review-policy/')">Link</button>
-                            <button class="expand-btn" onclick="openPDF('pp_njssh.pdf')">PDF</button>
-                            <button class="expand-btn" onclick="toggleAbstract('pp_njssh')">Abstract</button>
-                        </div>
-                    <div id="pp_njssh" class="abstract-box">
-                        Over the last three decades, the environment has become a hotly discussed topic all over the world. The United Nations has set up seventeen Sustainable Development Goals (SDGs) to achieve a standard of sustainable practices in the world including both developed and developing countries. Among these goals, the environment is regarded as a primary concern for all countries. The purpose of this research is to identify potential environmental indicators and challenges in organizational settings. This paper specifically investigates the impact of sustainable leadership on the environment, both directly and indirectly, through environmental practices and sustainable culture. Using a sample of 306 organizational personnel and Partial Least Square (PLS) Structural Equation Model (SEM), the results reveal that Sustainable Leadership (SL) have a significant impact on environmental sustainability. The results also indicate that Environmental Practices (EP) and Sustainable Culture (SC) influence Green Performance (GP). Findings of this study reinforce the organization’s concern for environmental sustainability and suggest how organizations and institutions can improve the environment through sustainable leadership. This is the first research to not only empirically study the interaction of SL and GP, but also to throw light on the existing literature by investigating the mediating function of environmental practices and sustainable culture and the underlying relationship.
-                    </div>   <div style="height: 30px;"></div>
+  <!-- Published Papers -->
+
+<div class="papers-wrapper">
 
 
 
-                <div class="paper-title">
-                    What are the Factors Making Pakistan's Exports Stagnant? Insight from Literature Review
-                   </div>                     <div class="journal-name">The Pakistan Development Review, 2023</div>
-                        <div class="button-container">
-                            <button class="expand-btn" onclick="openLink('https://pide.org.pk/research/what-are-the-factors-making-pakistans-exports-stagnant-insight-from-literature-review-policy/')">Link</button>
-                            <button class="expand-btn" onclick="openPDF('pp_pdr.pdf')">PDF</button>
-                            <button class="expand-btn" onclick="toggleAbstract('pp_pdr')">Abstract</button>
-                        </div>
-                    <div id="pp_pdr" class="abstract-box">
-                      Value addition in Pakistani exporting products is needed since the quality rank of products are decreasing over the time. Moreover, we are exporting more products than Bangladesh, while export values of Bangladesh are higher than Pakistan. Competiveness of Pakistan’s exports is declining. Even, we are losing comparative advantage in textile sector due to Bangladesh and Vietnam’s increasing comparative advantage in global markets. Firm’s productivity is lower relative to India, USA etc. Pakistan’s old firms are as productive as newcomer is productive, while India’s old firms are virtually 50 percent more productive than newer firms. Lower investment in research and development (R&D) to have innovation in exported products.
-                    </div>   <div style="height: 30px;"></div>
-                    
+  <!-- <div class="paper-category">
+  <h2>Job Market</h2>
+  <div id="job"></div>
+  </div> -->
+
+  <div class="paper-category">
+  <h2>Publications</h2>
+  <div id="published"></div>
+  </div>
 
 
+  
+  <div class="paper-category">
+  <h2>Under Review</h2>
+  <div id="review"></div>
+  </div>
 
-                
-                <div class="paper-title">
-                    The Quality of Life and Policy Issues among the Middle East and North African Countries
-                   </div>                     <div class="journal-name">Applied Research in Quality of Life, 2020</div>
-                        <div class="button-container">
-                            <button class="expand-btn" onclick="openLink('https://link.springer.com/article/10.1007/s11482-019-09767-4')">Link</button>
-                            <button class="expand-btn" onclick="openPDF('other_arql.pdf')">PDF</button>
-                            <button class="expand-btn" onclick="toggleAbstract('other_arql')">Abstract</button>
-                        </div>
-                    <div id="other_arql" class="abstract-box">
-                      The book is written by el-Sayed el-Aswad. He is instructor of anthropology at United Arab Emirates University and has written 3 books on life quality, well-being, religion and policy issues. In this book theory of well-being is used in all scenarios and the most focused variable was the ultimate well-being, that generates occasions for well-being and happiness of people.
-                    </div>   <div style="height: 30px;"></div>
+    <div class="paper-category">
+  <h2>Working Papers</h2>
+  <div id="working"></div>
+  </div>
 
-                <div class="paper-title">
-                    Review of The Quality of Life and Policy Issues Among the Middle East and North African Countries
-                   </div>                     <div class="journal-name">Journal of Business Ethics, 2020</div>
-                        <div class="button-container">
-                            <button class="expand-btn" onclick="openLink('https://link.springer.com/article/10.1007/s10551-019-04334-1')">Link</button>
-                            <button class="expand-btn" onclick="openPDF('other_jbe.pdf')">PDF</button>
-                            <button class="expand-btn" onclick="toggleAbstract('other_jbe')">Abstract</button>
-                        </div>
-                    <div id="other_jbe" class="abstract-box">
-                            This book addresses the key challenges and threats to the quality of life for the people who live in Middle East and North Africa. The ultimate focus of author is on both local/ internal and global/external factors and drives which can have significant impact on the quality of life in MENA. Furthermore, the book delineates details of quality of life, success, challenges and human development in MENA. The book represents 21 countries of MENA region but the main six countries on which all cross-cultural analysis was done are Egypt, Iran, Israel, Tunisia, Turkey, and the UAE. The book has also highlighted the demographic, geographic and political features of those countries. The ultimate indicators of quality of life were well-being, happiness, life satisfaction, tolerance, freedom of speech and political right. The author of the book El Syed Al Aswad is a well known academic researcher in the discipline of happiness, life issues and policy issues. He is currently working as a professor at UAE University. Furthermore, he has so many contributions in the field of happiness, life quality and social issues. Accordingly, his work has also significant importance in the relevant applicable discipline.
-                    </div>   <div style="height: 30px;"></div>
+    <div class="paper-category">
+  <h2>Work in Progress</h2>
+  <div id="wip"></div>
+  </div>
+
+    <div class="paper-category">
+  <h2>Other Publications</h2>
+  <div id="other"></div>
+  </div>
 
 
+</div>
 
-
-            <!-- Other Publications -->
-            <div class="section" id="published">
-                  <h1 class="animated-underline">Working Papers</h1>
-
-
-                <div class="paper-title">
-                    The Impact of Terrorism on Education: Evidence from the Death of Osama bin Laden in Pakistan  </div>                     
-                        <div class="journal-name">R&R - Labour Economics</div>
-                        <div class="button-container">
-                            <!-- <button class="expand-btn" onclick="openLink('link')">Link</button> -->
-                            <!-- <button class="expand-btn" onclick="openPDF('name_pdf.pdf')">PDF</button> -->
-                            <button class="expand-btn" onclick="toggleAbstract('wp_terror_edu')">Abstract</button>
-                        </div>
-                    <div id="wp_terror_edu" class="abstract-box">
-                          This paper investigates the impact of terrorism on educational outcomes following the death of Osama bin Laden in Pakistan. The unexpected death of bin Laden, Al-Qaeda's founder and symbolic leader, triggered a significant escalation in retaliatory terrorist attacks. Terrorist groups perceived Pakistan as complicit in the U.S. operation, leading to increased attacks on government, military, and civilian targets, with assaults on educational institutions rising by 50 percent. This surge led to a significant decline in educational attainment, reducing average years of schooling by 0.52 years and lowering primary school completion rates by 5.9 percentage points, with a more pronounced impact on girls. Furthermore, academic performance declined, with math, English, and reading scores falling by approximately 0.1 standard deviations. These findings highlight that the elimination of a terrorist leader can incite retaliatory violence, significantly undermining the educational prospects of children, particularly girls.
-                    </div>   <div style="height: 30px;"></div>
-
-                <div class="paper-title">
-                    Terror and Trust </div>                     
-                        <div class="journal-name">Under Review</div>
-                        <div class="button-container">
-                            <!-- <button class="expand-btn" onclick="openLink('link')">Link</button> -->
-                            <!-- <button class="expand-btn" onclick="openPDF('name_pdf.pdf')">PDF</button> -->
-                            <button class="expand-btn" onclick="toggleAbstract('wr_terror_trust')">Abstract</button>
-                        </div>
-                    <div id="wr_terror_trust" class="abstract-box">
-                        This paper estimates the effect of exposure to terrorist attacks on election outcomes. Since terrorists may choose targets endogenously, I construct a set of novel instruments. To that end, I leverage exogenous variation of the timing and location of the death of Osama bin Laden and the Red Mosque siege. I find that attacks suppress voter turnout by 5 percent and 3 percent more than predicted by difference-in-differences-type estimators. This indicates that terrorists target areas experiencing positive shocks. Using a very unique set of datasets, evidence suggests religious extremism, media exposure, demand for Sharia law, fears, and migration as mechanisms, rather than degradation of electoral infrastructure.  
-                    </div>   <div style="height: 30px;"></div>
-
-
-                <div class="paper-title">
-                    Human Capital Development: Evidence from Natural Disasters and Migration </div>                     
-                        <div class="journal-name">Under Review</div>
-                        <div class="button-container">
-                            <!-- <button class="expand-btn" onclick="openLink('link')">Link</button> -->
-                            <!-- <button class="expand-btn" onclick="openPDF('name_pdf.pdf')">PDF</button> -->
-                            <button class="expand-btn" onclick="toggleAbstract('wr_earthquake')">Abstract</button>
-                        </div>
-                    <div id="wr_earthquake" class="abstract-box">
-                                    This paper uses the 2005 Pakistan earthquake as a natural experiment and the role of migration to estimate its long-term effects on human development. Exposure to the earthquake was plausibly exogenous for individuals born after the disaster. I exploit variation across birth cohorts and districts affected by this event. I find that cohorts exposed to the earthquake represent higher rates of disabilities and lower educational attainment and labor market outcomes. I also find that migration before or immediately after the earthquake can mitigate its impact on disabilities. The effects are more pronounced for cognitive disabilities, girls, and individuals from low-education and low-income households. These findings highlights the importance of migration and investing in affected cohorts to improve long-term human capital   
-                    </div>   <div style="height: 30px;"></div>
-
-
-                <div class="paper-title">
-                    Spillovers of Digitization </div>                     
-                        <!-- <div class="journal-name">Under Review</div> -->
-                        <div class="button-container">
-                            <!-- <button class="expand-btn" onclick="openLink('link')">Link</button> -->
-                            <!-- <button class="expand-btn" onclick="openPDF('name_pdf.pdf')">PDF</button> -->
-                            <button class="expand-btn" onclick="toggleAbstract('wp_digitization')">Abstract</button>
-                        </div>
-                    <div id="wp_digitization" class="abstract-box">
-                        I use high-frequency, incident-level corruption data, combined with agricultural credit and land use datasets, to estimate the impact of land record digitization. Exploiting the phased implementation of digitization as a natural experiment and using deviations in its rollout as an instrumental variable, I find an increase in documentation of corruption complaints by 29.35 percent per million population while reducing enquiries and cases by 40.66 percent and 31.71 percent, respectively, indicating early resolution of disputes due to improved transparency. Civil case registrations at the Lahore High Court also increased, accompanied by higher mediation success rates. Additionally, access to agricultural credit improved significantly for small farmholders and non-farm holders, while no effect was observed for above-economic holdings. Land use patterns showed an increase in cropped and sown areas, reflecting enhanced agricultural productivity. I find transparency as the primary mechanism driving these effects, as digitization reduces information asymmetry and limits opportunities for corruption by increasing public access to reliable land records. A game-theoretic model is proposed to explain how transparency influences bureaucratic behavior and citizen engagement. Robustness checks using intent-to-treat and local average treatment effect analyses confirm the consistency of results across various specifications. These findings highlight the transformative potential of e-governance reforms in improving state capacity, fostering accountability, and promoting inclusive development. The paper concludes with policy recommendations for scaling similar interventions in other regions to enhance governance outcomes.
-                    </div>   <div style="height: 30px;"></div>                    
-
-                    
-                <div class="paper-title">
-                    Terrorism, Mental Health, and Labor Market Outcomes: Evidence from the 9/11 Attack </div>                     
-                        <!-- <div class="journal-name">Under Review</div> -->
-                        <div class="button-container">
-                            <!-- <button class="expand-btn" onclick="openLink('link')">Link</button> -->
-                            <!-- <button class="expand-btn" onclick="openPDF('name_pdf.pdf')">PDF</button> -->
-                            <button class="expand-btn" onclick="toggleAbstract('wp_terror_health')">Abstract</button>
-                        </div>
-                    <div id="wp_terror_health" class="abstract-box">
-                        This paper examines the impact of exposure to terrorism on mental health and labor market outcomes in the United States, focusing on the unexpected 9/11 attack. Using data from the Global Terrorism Database and the Behavioral Risk Factor Surveillance System surveys, we find that exposure to terrorism significantly deteriorates mental health, which in turn is associated with adverse labor market outcomes, including employment and income. However, we do not find any significant effects on physical health or overall general health. Our findings show heterogeneous effects across gender, income, race, and ethnicity, with females and high-income individuals experiencing the most significant impacts. These results suggest the need for mental health interventions and economic support policies to mitigate the socioeconomic consequences of terrorism exposure.
-                    </div>   <div style="height: 30px;"></div>  
-
-
-                <div class="paper-title">
-                    Who Terrorists Attack? </div>                     
-                        <!-- <div class="journal-name">Under Review</div> -->
-                        <div class="button-container">
-                            <!-- <button class="expand-btn" onclick="openLink('link')">Link</button> -->
-                            <!-- <button class="expand-btn" onclick="openPDF('name_pdf.pdf')">PDF</button> -->
-                            <button class="expand-btn" onclick="toggleAbstract('wp_terror_who')">Abstract</button>
-                        </div>
-                    <div id="wp_terror_who" class="abstract-box">
-                      This paper answers "Who terrorists attack?", estimating the impact of terrorism on employment in Pakistan. Using instrumental variable estimation, I find that attacks reduce employment by 7.4 percentage points, a pronounced and significant than what is predicted by the difference-in-differences type estimator. I find that terrorists target areas experiencing positive shocks. Using a unique set of datasets, I find interesting mechanisms including media exposure, extremism, pro-sharia, migration, soft targets, development, and education. Findings are heterogeneous by gender, area, industry, and occupation types. Exclusion restriction, instrument validity, robustness, placebo, and falsification tests are consistent across specifications.
-                    </div>   <div style="height: 30px;"></div>  
-
-
-
-                <div class="paper-title">
-                    title of paper
-                   </div>                     <div class="journal-name">journal, year</div>
-                        <div class="button-container">
-                            <button class="expand-btn" onclick="openLink('link')">Link</button>
-                            <button class="expand-btn" onclick="openPDF('name_pdf.pdf')">PDF</button>
-                            <button class="expand-btn" onclick="toggleAbstract('name_pdf')">Abstract</button>
-                        </div>
-                    <div id="name_pdf" class="abstract-box">
-                          abstract
-                    </div>   <div style="height: 30px;"></div>
-
-
-
-
-                 
-              
-            <!-- Conference Papers Section -->
-
-
-
-           
-        </div>
- 
-
-    <script>
-        // Function to scroll to the selected section
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        // Highlight the current section based on scroll position
-        window.addEventListener('scroll', function () {
-            const sections = document.querySelectorAll('.section');
-            const navLinks = document.querySelectorAll('.nav ul li button');
-
-            sections.forEach((section, index) => {
-                if (isInViewport(section)) {
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    navLinks[index].classList.add('active');
-                }
-            });
-        });
-
-        // Check if the section is in the viewport
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return rect.top >= 0 && rect.bottom <= window.innerHeight;
-        }
-
-        // Sample functions for opening links and PDFs (just placeholders)
-        function openLink(url) {
-            window.open(url, '_blank');
-        }
-
-        function openPDF(url) {
-            window.open(url, '_blank');
-        }
-
-        function toggleAbstract(abstractId) {
-            const abstract = document.getElementById(abstractId);
-            abstract.style.display = abstract.style.display === 'none' ? 'block' : 'none';
-        }
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!-- Scripts -->
+<script src="scripts.js" defer>  </script>
 
 
 
@@ -854,53 +84,61 @@ h1.animated-underline {
 
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll("nav a");
-    const currentPage = location.pathname.split("/").pop();
+  fetch("papers/job.html") // adjust path if needed
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("job").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading papers:", error));
+</script>
 
-    navLinks.forEach(link => {
-      if (link.getAttribute("href") === currentPage) {
-        link.classList.add("active");
-      }
-    });
-  });
+<script>
+  fetch("papers/other.html") // adjust path if needed
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("other").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading papers:", error));
 </script>
 
 
+<script>
+  fetch("papers/published.html") // adjust path if needed
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("published").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading papers:", error));
+</script>
+
+<script>
+  fetch("papers/review.html") // adjust path if needed
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("review").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading papers:", error));
+</script>
+
+<script>
+  fetch("papers/wip.html") // adjust path if needed
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("wip").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading papers:", error));
+</script>
+
+<script>
+  fetch("papers/working.html") // adjust path if needed
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("working").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading papers:", error));
+</script>
 
 
-<div class="cursor"></div>
-
-  <script>
-    const cursor = document.querySelector('.cursor');
-
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = `${e.pageX}px`;
-      cursor.style.top = `${e.pageY}px`;
-    });
-  </script>
-
-
-
-
-
-
- <script>
-    function toggleTheme() {
-      const body = document.body;
-      const btn = document.getElementById('themeToggle');
-      body.classList.toggle('dark-theme');
-      
-      // Change symbol based on theme
-      if (body.classList.contains('dark-theme')) {
-        btn.textContent = '🌞'; // Light mode symbol
-      } else {
-        btn.textContent = '🌙'; // Dark mode symbol
-      }
-    }
-  </script>
-
-
-
+  
 </body>
 </html>

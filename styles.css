@@ -1,0 +1,716 @@
+  @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+
+  
+  /* Base Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff00;
+      color: #222;
+      
+      /* font-family: 'Inter', sans-serif; */
+      font-family: 'Playfair Display', serif;
+        }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      font-family: 'Londrina Outline', cursive;
+    }
+
+/* this h1 is for main name Saqib Hussain */
+    h1 {
+      /* font-family: 'Fleur De Leah', cursive; */
+    /* font-family: 'Londrina Outline', cursive; */
+      /* font-family: 'Great Vibes', cursive; */
+      /* font-family: 'Playfair Display', serif; */
+      font-family: 'Cookie', cursive;
+      font-size: 2rem;
+      font-weight: 12;
+            padding: 2rem 1rem 1rem;
+
+}
+
+/* this h2is for main name Saqib Hussain */
+    h4, h5, h6 {
+
+  /* font-family: 'Updock', cursive; */
+
+      /* font-family: 'Great Vibes', cursive; */
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 50;
+      margin: 5;
+}
+
+
+
+    .gray-line {
+      width: 70%;
+      height: .5px;
+      background-color: #8f8f8f;
+      margin: -0.5rem auto;
+    }
+
+    /* Navigation */
+
+
+    nav {
+      position: static;
+      text-align: center;
+      margin: 1rem 0;
+  font-family: 'Playfair Display', cursive;
+
+    }
+
+    nav a {
+      position: relative;
+      display: inline-block;
+      margin: 0 1.2rem;
+      padding: 0px 0;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .8rem;
+      letter-spacing: 1px;
+      color: #000000;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 99%;
+      height: 1px;
+      background-color: #222;
+      bottom: -2px;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      transform: scaleX(1);
+    }
+
+    /* Section */
+    section {
+      max-width: 1000px;
+      margin: 6rem auto;
+      padding: 0 1rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .bio-text {
+      flex: 1;
+      font-size: .9rem;
+      color: #333;
+    }
+
+    h2 {
+      font-size: 1rem;
+      border-bottom: 0.00001px solid #ababab;
+            padding-top: .5rem;
+      padding-bottom: .1rem;
+      margin-bottom: .1rem;
+      align-self: center;
+    }
+
+
+    h4 {
+      font-size: 1rem;
+      padding-top: .5rem;
+      padding-bottom: .1rem;
+      margin-bottom: .1rem;
+      align-self: center;
+    }
+
+
+
+/* Affiliations Links */
+.bio-text .affiliations {
+  font-family: 'Playfair Display', serif;
+  font-size: .8rem;
+  text-align: left;
+  margin-bottom: .6rem;
+}
+
+.bio-text .affiliations a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 800;
+  transition: color 0.3s ease;
+}
+
+.bio-text .affiliations a:hover {
+  color: #fe9400;
+}
+
+.bio-text .affiliations .separator {
+  color: #888;
+  margin: 0 0.5rem;
+}
+
+/* Short Bio */
+.bio-text .short-bio {
+  font-family: 'Playfair Display', serif;
+  font-size: .85rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+/* Interests */
+/* .bio-text .interests {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #ff1111;
+} */
+
+/* Extra Bio (hidden initially) */
+.bio-text .extra-bio {
+  font-family: 'Playfair Display', serif;
+  font-size: .85rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+/* Expand Button */
+.bio-text .expand-btn {
+  background-color: transparent;
+  border: .1px solid #000;
+  color: #000;
+  padding: 3px 8px;
+  font-size: 0.6rem;
+  font-weight: 100;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.1rem;
+    font-family: font-family: 'Updock', cursive;
+
+}
+
+.bio-text .expand-btn:hover {
+  background-color: #515050;
+  color: #fff;
+}
+
+
+
+
+
+/* Image Holder */
+.image-holder {
+  width: 30%;
+  height: 420px;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  position: relative;
+}
+
+/* Image */
+.image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  
+  /* Initially black & white */
+  filter: grayscale(100%) brightness(120%) contrast(105%);
+}
+
+/* Hover: reveal original colors and slight zoom */
+.image-holder:hover img {
+  transform: scale(1.05);
+  filter: grayscale(0%) brightness(105%) contrast(110%);
+}
+
+
+    /* Expand Button */
+    .expand-btn {
+  background-color: transparent;
+  border: .1px solid #000;
+  color: #000;
+  padding: 3px 8px;
+  font-size: 0.6rem;
+  font-weight: 100;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.1rem;
+    font-family: font-family: 'Updock', cursive;
+    }
+
+       .button-container-papers .expand-btn {
+  background-color: transparent;
+  border: .1px solid #000;
+  color: #000;
+  padding: 3px 8px;
+  font-size: 0.6rem;
+  font-weight: 100;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.1rem;
+    font-family: font-family: 'Updock', cursive;
+    }
+
+    .expand-btn:hover {
+      background-color: #646464;
+      color: #fff;
+    }
+
+    .extra-bio {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+      color: #444;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+    }
+
+
+    .button-container-papers {
+  display: flex;
+  justify-content: flex-start; /* align left */
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+    .button-container-papers .expand-btn {
+      font-size: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .button-container .expand-btn {
+      font-size: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      section {
+        flex-direction: column;
+      }
+
+      .image-holder {
+        width: 100%;
+        height: 320px;
+      }
+    }
+
+
+
+    
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Cursor with Transparent Shadow</title>
+  <style>
+    /* Custom Cursor */
+    body {
+      cursor: none;
+    }
+
+   .cursor {
+  position: fixed;
+  width: 180px; /* Slightly smaller to give a smoother feel */
+  height: 180px;
+  border-radius: 50%; /* Perfect circle for smoothness */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease-out, background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(128, 128, 128, 0.025); /* Very dim grey with 95% transparency */
+  box-shadow: 0 0 200px rgba(128, 128, 128, 0.025); /* Larger, subtle glow around the edges */
+  z-index: 9999; /* Ensures the cursor is always on top */
+}
+
+.cursor:hover {
+  background-color: rgba(128, 128, 128, 0.025); /* Subtle color change on hover */
+  box-shadow: 0 0 300px rgba(128, 128, 128, 0.025); /* Glow effect intensifies on hover */
+}
+
+
+
+/*theme changing button*/
+
+#themeToggle {
+  position: fixed;        /* Fixes it relative to viewport */
+  bottom: 10px;           /* Distance from bottom */
+  right: 10px;            /* Distance from right */
+  padding: 1px 1px;     /* Button size */
+  font-size: 1rem;      /* Icon size */
+  border: none;
+  border-radius: 10%;     /* Circular button */
+  background-color: #00000000; /* Dark background */
+  color: #fff;            /* White icon */
+  cursor: pointer;
+  box-shadow: 0 0px 0px rgba(0,0,0,0.3); /* Subtle shadow */
+  transition: all 0.3s ease;
+  z-index: 1000;          /* Ensure it's on top */
+}
+
+#themeToggle:hover {
+  background-color: #8e8c8c; /* Slightly lighter on hover */
+  transform: scale(1.05);  /* Small pop effect */
+}
+
+
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #000000fe; /* dark background */
+  color: #c4c4c4;            /* light text for readability */
+  transition: all 0.3s ease;
+}
+
+/* Links in dark theme */
+body.dark-theme a {
+  color: #e1e1e1;         /* golden color for contrast */
+  transition: color 0.3s ease;
+}
+
+body.dark-theme a:hover {
+  color: #ff9100;         /* lighter gold on hover */
+}
+
+/* Header H1 in dark theme */
+body.dark-theme h1 {
+  color: #ffffff;
+}
+
+/* H2, H3, H4 in dark theme */
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+  color: #fff;
+  border-color: #bbb; /* for bottom borders of h2 etc. */
+}
+
+/* Navigation */
+body.dark-theme nav a {
+  color: #fff; /* navigation links */
+}
+
+body.dark-theme nav a:hover,
+body.dark-theme nav a.active::after {
+  color: #fca311; 
+  border-color: #fca311;
+}
+
+/* Bio Text */
+body.dark-theme .bio-text,
+body.dark-theme .bio-text .short-bio,
+body.dark-theme .bio-text .extra-bio,
+body.dark-theme .bio-text .affiliations a {
+  color: #ddd;
+}
+
+body.dark-theme .bio-text .affiliations a:hover {
+  color: #fca311;
+}
+
+/* Expand Button */
+body.dark-theme .expand-btn {
+  border-color: #fff;
+  color: #fff;
+}
+
+body.dark-theme .expand-btn:hover {
+  background-color: #383838;
+  color: #c8c8c8;
+}
+
+
+
+
+.pdf-container {
+  display: block;
+  margin: 2rem auto;
+  width: 40vw;
+  height: 70vh;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  background: linear-gradient(145deg, #f5f5f5, #e0e0e0);
+}
+
+.pdf-container:hover {
+  transform: translateY(-15px) scale(1);        /* Lift only, no scale */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  border-color: #000000;
+}
+
+.pdf-embed {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+
+
+
+
+
+/* Wrapper for centering all paper categories */
+.papers-wrapper {
+  max-width: 1000px;      /* Limit width for better readability */
+  margin: 0 auto 4rem;   /* Center horizontally and give bottom spacing */
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;             /* Space between categories */
+  font-family: 'Playfair Display', serif;
+}
+/* Buttons */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.expand-btn {
+  background: none;
+  border: 1px solid #333;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.expand-btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+body.dark-theme .expand-btn {
+  border-color: #fff;
+  color: #fff;
+}
+
+body.dark-theme .expand-btn:hover {
+  background: #444;
+  color: #fff;
+}
+
+
+
+
+.paper-title { 
+  font-family: 'Playfair Display', serif; 
+  font-size: .9rem; 
+  font-weight: 100; 
+  margin-bottom: 0.1rem; 
+  font-weight: 600;
+}
+
+.paper-meta {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.journal-name a {
+    font-size: 0.85rem; 
+  font-weight: 600; 
+    font-size: 0.8rem; 
+  color: #0089c9;    /* link blue */
+  text-decoration: none;
+
+  
+}
+
+.journal-name a:hover {
+  text-decoration: underline;
+    color: #fca311;    /* link blue */
+}
+
+
+
+  .coauthor { 
+  font-size: 0.85rem; 
+  font-weight: 400; 
+  color: #6a6a6a; 
+  margin-bottom: 0.5rem; }
+
+
+.abstract-box {
+  display: none;
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: justify;
+  color: #2c2c2c;
+  background-color: #fafafa;       /* clean light background */
+  border: 0.5px solid #8e8c8c;       /* single subtle border */
+  padding: 1rem 1.2rem;
+  border-radius: 6px;               /* slight curve */
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-3px);
+  font-family: 'Playfair Display', serif; /* elegant serif font */
+}
+
+.abstract-box.show {
+  display: block;
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+html {
+  overflow-y: scroll; /* Always reserve space for vertical scrollbar */
+}
+
+
+  .resources-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .resource-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    background-color: #ffffff00; /* transparent background */
+    color: #000000;
+    border: 1px solid #444; /* very thin dark gray border */
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .resource-btn:hover {
+    background-color: #767575; /* dark gray hover */
+    color: #fff; /* text color changes to white on hover */
+    transform: scale(1.05);
+  }
+
+  .resource-btn:active {
+    transform: scale(1);
+  }
+
+
+
+
+
+
+
+  
+
+.course-list {
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    max-width: 950px;
+}
+
+.course-item {
+    position: relative;
+    padding: 8px 20px;
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+/* Vertical left border as a short line */
+.course-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;          /* border thickness */
+    height: 50%;         /* reduced height of the border */
+    background-color: #717171;
+}
+
+/* Dark theme border */
+body.dark-theme .course-item::before {
+    background-color: #fff7f7;
+}
+
+/* Date styling */
+.course-item .date {
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #363636;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+body.dark-theme .course-item .date {
+    color: #d2cbcb;
+}
+
+/* Title styling */
+.course-item .title {
+    font-weight: 600;
+    color: #353535;
+    font-size: 1em;
+    display: inline-block;
+}
+
+body.dark-theme .course-item .title {
+    color: #dfdfdf;
+}
+
+/* Institution styling */
+.course-item .institution {
+    display: block;
+    font-size: 0.9em;
+    color: #4e4c4c;
+    margin-top: 4px;
+}
+
+body.dark-theme .course-item .institution {
+    color: #cacaca;
+}
+
+  
+  
+

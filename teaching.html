@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research | Saqib</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+  rel="stylesheet"
+>
+  <!-- Main CSS -->
+  <link href="styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Header placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor"></div>
+
+  <!-- Theme toggle button -->
+  <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+
+  <!-- Main Section -->
+<br><br>
+
+  <!-- Published Papers -->
+
+<div class="papers-wrapper">
+
+    <div class="paper-category">
+  <h2>Instructor</h2>
+  <div id="instructor"></div>
+  </div>
+
+    <div class="paper-category">
+  <h2>Teaching Assistant</h2>
+  <div id="teaching_assistant"></div>
+  </div>
+
+
+</div>
+
+  <!-- Scripts -->
+<script src="scripts.js" defer>  </script>
+
+
+
+
+
+
+<script>
+  fetch("teaching/teaching_assistant.html") // adjust path if needed
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("teaching_assistant").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading papers:", error));
+</script>
+
+<script>
+  fetch("teaching/instructor.html") // adjust path if needed
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("instructor").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading papers:", error));
+</script>
+
+
+  
+</body>
+</html>
