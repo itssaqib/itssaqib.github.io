@@ -121,3 +121,20 @@ document.addEventListener("DOMContentLoaded", () => {
 window.openLink = function(url) {
   window.open(url, "_blank");
 };
+
+
+
+
+  function copyEmail(event, element) {
+    event.preventDefault();
+    const email = "saqibhussain@kdis.ac.kr";
+    navigator.clipboard.writeText(email).then(() => {
+      const tooltip = element.parentElement.querySelector(".tooltip-text");
+      tooltip.classList.add("show");
+      setTimeout(() => {
+        tooltip.classList.remove("show");
+      }, 1000); // disappears after 1 second
+    }).catch(err => {
+      console.error("Failed to copy email: ", err);
+    });
+  };

@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ImpactAI | World Bank</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+  rel="stylesheet"
+>
+  <!-- Main CSS -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor"></div>
+
+  <!-- Theme toggle button -->
+  <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+
+  <!-- Main Section -->
+ <br><br>
+<p align="center">Bringing Evidence to Scale</p>
+<div class="gray-line-small"></div>
+<!-- preload improves load speed -->
+<link rel="preload" as="image" href="/photo/wblogo.svg">
+<link rel="preload" as="image" href="/photo/googlelogo.svg">
+
+<!-- actually display them -->
+<div style="text-align:center; margin-bottom:1rem;">
+  <img src="/photo/wblogo.svg" alt="World Bank Logo" height="25">
+  <img src="/photo/googlelogo.svg" alt="Google Logo" height="25" style="margin-left:5px;">
+</div>
+
+<div class="video-container">
+  <video class="video-embed" controls autoplay muted loop playsinline>
+    <source src="https://storage.googleapis.com/impactai-website-development/ImpactAi_UserJourney.mp4" type="video/mp4">
+  </video>
+</div>
+
+
+<!-- Outer container centers content -->
+<div style="
+  display: flex;
+  justify-content: center;
+  align-items: center;
+">
+  <div class="button-container-papers" style="text-align: center;">
+    <a href="https://impactai.worldbank.org/" target="_blank" rel="noopener noreferrer">
+      <button class="expand-btn">ImpactAI</button>
+    </a>
+    <a href="https://impactai.worldbank.org/jointhewaitlist" target="_blank" rel="noopener noreferrer" style="margin-left: 10px;">
+      <button class="expand-btn">Join the Waitlist</button>
+    </a>
+  </div>
+</div>
+
+
+
+
+  <!-- Footer placeholder -->
+  <!-- <div id="footer-placeholder"></div> -->
+
+  <!-- Scripts -->
+  <script src="scripts.js" defer></script>
+</body>
+</html>

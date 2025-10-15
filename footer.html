@@ -1,4 +1,93 @@
+
+
+
+
 <footer>
+  <div class="button-container" style="text-align:center; margin-top:1rem;">
+<div style="display:inline-block; position: relative;">
+  <a href="#" title="saqibhussain@kdis.ac.kr" onclick="copyEmail(event, this)">
+    <img src="https://img.icons8.com/ios/452/email.png" alt="Email" class="footer-icon">
+  </a>
+  <span class="tooltip-text">Email copied!</span>
+</div>
+    <a href="https://maps.app.goo.gl/zDxAJaA939LqiRXHA" title="Room 2121, 102, KDI School, Sejong (30149), Republic of Korea">
+      <img src="https://img.icons8.com/ios/452/marker.png" alt="Address" class="footer-icon">
+    </a>
+    <a href="tel:+923115176964" title="Whatsapp: +9231-1517-6964">
+      <img src="https://img.icons8.com/ios/452/phone.png" alt="Phone" class="footer-icon">
+    </a>
+    <a href="https://www.linkedin.com/in/meetsaqib/" title="LinkedIn">
+      <img src="https://img.icons8.com/ios/452/linkedin.png" alt="LinkedIn" class="footer-icon">
+    </a>
+    <!-- X / Twitter Icon -->
+    <a href="https://twitter.com/saqib7432" title="X">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/X_logo_2023_original.svg/1200px-X_logo_2023_original.svg.png" alt="X" class="footer-icon">
+    </a>
+    <a href="https://scholar.google.com/citations?user=ISLPJjgAAAAJ&hl=en" title="Google Scholar">
+      <img src="https://img.icons8.com/ios/452/google-scholar.png" alt="Google Scholar" class="footer-icon">
+    </a>
+  </div>
+</footer>
+
+<style>
+  .footer-icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 0.5rem;
+    filter: grayscale(50%);
+    transition: filter 0.3s;
+  }
+  .footer-icon:hover {
+    filter: grayscale(50%);
+  }
+
+    .tooltip-text {
+    visibility: hidden;
+    background-color: rgb(255, 255, 255);
+    color: #6d6d6d;
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 120%; /* above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .tooltip-text.show {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Old Style Buttons -->
+<!-- <footer>
   <div class="button-container">
     <button class="expand-btn" onclick="window.location.href='mailto:saqibhussain@kdis.ac.kr'" title="Email">Email</button>
     <button class="expand-btn" onclick="window.location.href='https://maps.app.goo.gl/zDxAJaA939LqiRXHA'" title="Address">Address</button>
@@ -7,4 +96,4 @@
     <button class="expand-btn" onclick="window.location.href='https://orcid.org/my-orcid?orcid=0000-0001-9232-8262'" title="ORCID">ORCID</button>
     <button class="expand-btn" onclick="window.location.href='https://scholar.google.com/citations?user=ISLPJjgAAAAJ&hl=en'" title="Scholar">Scholar</button>
   </div>
-</footer>
+</footer> -->
