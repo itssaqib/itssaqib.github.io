@@ -736,12 +736,16 @@ body.dark-theme .course-item .institution {
   overflow: hidden;
   background: linear-gradient(145deg, #f5f5f5, #e0e0e0);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    filter: grayscale(100%) brightness(100%) contrast(100%);
+
 }
 
 .video-container:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
   border-color: #515050;
+    filter: grayscale(0%) brightness(100%) contrast(100%);
+  transform: scale(1.08);
 }
 
 .video-embed {
@@ -752,8 +756,6 @@ body.dark-theme .course-item .institution {
   display: block;
   object-fit: cover;
 }
-
-
 
 
 
