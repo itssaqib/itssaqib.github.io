@@ -23,8 +23,8 @@
     h1 {
       /* font-family: 'Fleur De Leah', cursive; */
     /* font-family: 'Londrina Outline', cursive; */
-      font-family: 'Great Vibes', cursive;
-      /* font-family: 'Playfair Display', serif; */
+      /* font-family: 'Great Vibes', cursive; */
+      font-family: 'Playfair Display', serif;
       /* font-family: 'Cookie', cursive; */
       font-size: 2rem;
       font-weight: 12;
@@ -240,7 +240,7 @@
   transition: transform 0.5s ease, filter 0.5s ease;
   
   /* Initially black & white */
-  filter: grayscale(100%) brightness(120%) contrast(105%);
+  filter: grayscale(100%) brightness(110%) contrast(120%);
 }
 
 /* Hover: reveal original colors and slight zoom */
@@ -473,12 +473,14 @@ body.dark-theme .expand-btn:hover {
   overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
   background: linear-gradient(145deg, #f5f5f5, #e0e0e0);
+  filter: grayscale(100%) brightness(100%) contrast(100%);
 }
 
 .pdf-container:hover {
   transform: translateY(-15px) scale(1);        /* Lift only, no scale */
   box-shadow: 0 20px 40px rgba(0,0,0,0.35);
   border-color: #000000;
+  filter: grayscale(000%) brightness(100%) contrast(100%);
 }
 
 .pdf-embed {
@@ -752,7 +754,7 @@ body.dark-theme .course-item .institution {
   width: 100%;
   height: 100%;
   border: none;
-  border-radius: 16px;
+  border-radius: 8px;
   display: block;
   object-fit: cover;
 }
