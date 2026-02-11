@@ -5,7 +5,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #ffffff00;
+      background-color: #fbfbfb;
       color: #222;
       
       /* font-family: 'Inter', sans-serif; */
@@ -160,7 +160,7 @@
 }
 
 .bio-text .affiliations a:hover {
-  color: #fe9400;
+  color: #00a9bc;
 }
 
 .bio-text .affiliations .separator {
@@ -219,8 +219,8 @@
 
 /* Image Holder */
 .image-holder {
-  width: 30%;
-  height: 420px;
+  width: 25%;
+  height: 350px;
   background: linear-gradient(135deg, #e0eafc, #cfdef3);
   display: flex;
   justify-content: center;
@@ -395,7 +395,7 @@
 
 /* Dark Theme */
 body.dark-theme {
-  background-color: #000000fe; /* dark background */
+  background-color: #2a2a2afe; /* dark background */
   color: #c4c4c4;            /* light text for readability */
   transition: all 0.3s ease;
 }
@@ -407,7 +407,7 @@ body.dark-theme a {
 }
 
 body.dark-theme a:hover {
-  color: #ff9100;         /* lighter gold on hover */
+  color: #00a9bc;         /* lighter gold on hover */
 }
 
 /* Header H1 in dark theme */
@@ -432,8 +432,8 @@ body.dark-theme nav a {
 
 body.dark-theme nav a:hover,
 body.dark-theme nav a.active::after {
-  color: #fca311; 
-  border-color: #fca311;
+  color: #00a9bc; 
+  border-color: #00a9bc;
 }
 
 /* Bio Text */
@@ -445,7 +445,7 @@ body.dark-theme .bio-text .affiliations a {
 }
 
 body.dark-theme .bio-text .affiliations a:hover {
-  color: #fca311;
+  color: #00a9bc;
 }
 
 /* Expand Button */
@@ -558,15 +558,14 @@ body.dark-theme .expand-btn:hover {
     font-size: 0.85rem; 
   font-weight: 600; 
     font-size: 0.8rem; 
-  color: #0089c9;    /* link blue */
+  color: #000000;    /* link blue */
   text-decoration: none;
 
   
 }
 
 .journal-name a:hover {
-  text-decoration: underline;
-    color: #fca311;    /* link blue */
+    color: #00a9bc;    /* link blue */
 }
 
 

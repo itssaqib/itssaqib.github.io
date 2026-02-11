@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fieldwork | Saqib</title>
+ <link rel="icon" type="image/png" href="photo/icon.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+  rel="stylesheet"
+>
+  <!-- Main CSS -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor"></div>
+
+  <!-- Theme toggle button -->
+  <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+
+
+    <link href="templatemo-3d-coverflow.css" rel="stylesheet">
+<!--
+
+TemplateMo 595 3d coverflow
+
+https://templatemo.com/tm-595-3d-coverflow
+
+-->
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <a href="#home" class="logo-container">
+        </a>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <div class="coverflow-wrapper">
+            <div class="info">
+                <h2 id="current-title">Mountain Landscape</h2>
+                <p id="current-description">Majestic peaks covered in snow during golden hour</p>
+            </div>
+
+            <div class="coverflow-container" tabindex="0">
+                <div class="coverflow" id="coverflow">
+                        
+                        <div class="coverflow-item" data-index="0">
+                        <div class="cover image-loading">
+                        <img src="images/afghan_refugee1.jpg" alt="Afghan Refugees in Pakistan" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                        </div>
+                        
+                        <div class="coverflow-item" data-index="0">
+                        <div class="cover image-loading">
+                        <img src="images/afghan_refugee2.jpg" alt="Afghan Refugees in Pakistan" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                        </div>
+                    
+                        
+                        <div class="coverflow-item" data-index="0">
+                        <div class="cover image-loading">
+                        <img src="images/afghan_refugee3.jpg" alt="Afghan Refugees in Pakistan" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                        </div>     
+
+                        <div class="coverflow-item" data-index="0">
+                        <div class="cover image-loading">
+                        <img src="images/afghan_refugee4.jpg" alt="Afghan Refugees in Pakistan" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                        </div>    
+
+                        <div class="coverflow-item" data-index="0">
+                        <div class="cover image-loading">
+                        <img src="images/afghan_refugee5.jpg" alt="Afghan Refugees in Pakistan" loading="lazy">
+                        </div>
+                        <div class="reflection"></div>
+                        </div>
+                    
+
+                </div>
+
+                <button class="nav-button prev" onclick="navigate(-1)">‹</button>
+                <button class="nav-button next" onclick="navigate(1)">›</button>
+
+                <div class="dots-container" id="dots"></div>
+                
+                <!-- Play/Pause Button -->
+                <button class="play-pause-button" id="playPauseBtn" onclick="toggleAutoplay()">
+                    <span class="play-icon">▶</span>
+                    <span class="pause-icon" style="display: none;">❚❚</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <span>↑</span>
+    </div>
+
+<script src="templatemo-3d-coverflow-scripts.js"></script>
+<script src="scripts.js"></script>
+
+</body>
+</html>
+
+
+
+<!-- To change/add images need to put image in folder photos, change title in field and also in templatemo-3d-coverflow-script.js file -->

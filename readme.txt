@@ -1,5 +1,4 @@
-cd C:\Users\admin\Desktop\aaaa\itssaqib.github.io
-
+cd 20250930
 git add .
 git commit -m "Update site with latest changes"
 git push origin main
