@@ -45,23 +45,31 @@ https://templatemo.com/tm-595-3d-coverflow
         const imageData = [
             {
                 title: "Afghan Refugees",
-                description: "Somewhere in Pakistan during 2022"
+                description: "Refugee Camps"
             },
             {
                 title: "Afghan Refugees",
-                description: "Somewhere in Pakistan during 2022"
+                description: "Refugee Camps"
             },
             {
                 title: "Afghan Refugees",
-                description: "Somewhere in Pakistan during 2022"
+                description: "Refugee Camps"
             },
             {
                 title: "Afghan Refugees",
-                description: "Somewhere in Pakistan during 2022"
+                description: "Refugee Camps"
             },
             {
                 title: "Afghan Refugees",
-                description: "Somewhere in Pakistan during 2022"
+                description: "Refugee Camps"
+            },
+            {
+                title: "LRMIS",
+                description: "Land Record Data Collection"
+            },
+            {
+                title: "LRMIS",
+                description: "Land Record Data Collection"
             }
         ];
 

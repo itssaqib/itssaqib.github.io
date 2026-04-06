@@ -1,4 +1,3 @@
 cd 20250930
-git add .
-git commit -m "Update site with latest changes"
+git pull origin main --rebase
 git push origin main
