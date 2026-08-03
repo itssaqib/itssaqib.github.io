@@ -122,6 +122,16 @@
     },
     "articleBody": "Abstract"
   },
+    {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Socioeconomic Consequences of KP-FATA Merger",
+    "author": {
+      "@type": "Person",
+      "name": "Saqib Hussain"
+    },
+    "articleBody": "Abstract"
+  },
   {
     "@context": "http://schema.org",
     "@type": "Article",
@@ -171,7 +181,7 @@
 
 
   <div class="paper-category">
-  <h2>Job Market</h2>
+  <h2>Job Market Paper</h2>
   <div id="job"></div>
   </div>
 
@@ -183,7 +193,7 @@
 
   
   <div class="paper-category">
-  <h2>Under Review</h2>
+  <h2>Under Review or R&R</h2>
   <div id="review"></div>
   </div>
 
@@ -195,6 +205,11 @@
     <div class="paper-category">
   <h2>Work in Progress</h2>
   <div id="wip"></div>
+  </div>
+
+      <div class="paper-category">
+  <h2>Future Projects</h2>
+  <div id="future"></div>
   </div>
 
     <div class="paper-category">
@@ -268,7 +283,14 @@
     .catch(error => console.error("Error loading papers:", error));
 </script>
 
-
+<script>
+  fetch("papers/future.html") // adjust path if needed
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("future").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading papers:", error));
+</script>
   
 </body>
 </html>

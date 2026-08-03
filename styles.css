@@ -220,7 +220,7 @@
 /* Image Holder */
 .image-holder {
   width: 25%;
-  height: 350px;
+  height: 400px;
   background: linear-gradient(135deg, #e0eafc, #cfdef3);
   display: flex;
   justify-content: center;
