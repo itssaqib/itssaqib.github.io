@@ -1,23 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ImpactAI | World Bank</title>
- <link rel="icon" type="image/png" href="photo/icon.png">
+  <link rel="icon" type="image/png" href="photo/icon.png">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
-<link
-  href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
-  rel="stylesheet"
->
+  <!-- Font: Jost -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+
+  <!-- Preload logos -->
+  <link rel="preload" as="image" href="photo/wblogo.png">
+  <link rel="preload" as="image" href="photo/googlelogo.svg">
+
   <!-- Main CSS -->
   <link href="styles.css" rel="stylesheet">
 </head>
@@ -30,73 +27,43 @@
   <div class="cursor"></div>
 
   <!-- Theme toggle button -->
-  <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+  <button id="themeToggle" type="button" onclick="toggleTheme()" aria-label="Switch to dark theme">🌙</button>
 
-  <!-- Main Section -->
- <br><br>
-<p align="center">Bringing Evidence to Scale</p>
-<div class="gray-line-small"></div>
-<!-- preload improves load speed -->
-<link rel="preload" as="image" href="/photo/wblogo.png">
-<link rel="preload" as="image" href="/photo/googlelogo.svg">
+  <br><br>
+  <p class="impact-tagline">Bringing Evidence to Scale</p>
+  <div class="gray-line-small"></div>
 
-<!-- actually display them -->
-<div style="text-align:center; margin-bottom:1rem;">
-  <img src="/photo/wblogo.png" alt="World Bank Logo" height="25">
-  <img src="/photo/googlelogo.svg" alt="Google Logo" height="25" style="margin-left:5px;">
-</div>
-
-<div class="video-container">
-  <video class="video-embed" controls autoplay muted loop playsinline>
-    <source src="https://storage.googleapis.com/impactai-website-production/impact-ai-video.mp4" type="video/mp4">
-  </video>
-</div>
-
-
-<!-- Outer container centers content -->
-<div style="
-  display: flex;
-  justify-content: center;
-  align-items: center;
-">
-  <div class="button-container-papers" style="text-align: center;">
-    <a href="https://impactai.worldbank.org/" target="_blank" rel="noopener noreferrer">
-      <button class="expand-btn">ImpactAI</button>
-    </a>
-    <a href="https://impactai.worldbank.org/requestaccess" target="_blank" rel="noopener noreferrer" style="margin-left: 10px;">
-      <button class="expand-btn">Request Demo</button>
-    </a>
+  <div class="impact-logos">
+    <img src="photo/wblogo.png" alt="World Bank logo" height="25">
+    <img src="photo/googlelogo.svg" alt="Google logo" height="25">
   </div>
-</div>
 
+  <div class="video-container">
+    <video class="video-embed" controls autoplay muted loop playsinline>
+      <source src="https://storage.googleapis.com/impactai-website-production/impact-ai-video.mp4" type="video/mp4">
+    </video>
+  </div>
 
-<h3 align="center">Why ImpactAI?</h3>
+  <div class="impact-buttons button-container-papers">
+    <a href="https://impactai.worldbank.org/" target="_blank" rel="noopener noreferrer" class="expand-btn">ImpactAI</a>
+    <a href="https://impactai.worldbank.org/requestaccess" target="_blank" rel="noopener noreferrer" class="expand-btn">Request Demo</a>
+  </div>
 
+  <h3 class="impact-heading">Why ImpactAI?</h3>
 
-<div style="width: 60%; margin: 0 auto; text-align: center;">
+  <div class="impact-text">
     <p>
-        Many policy interventions address development challenges – the key is knowing which ones deliver the greatest impact. Causal research studies aim to identify these best bets, but finding, standardizing, and comparing evidence is a complex, time-intensive task. ImpactAI is your specialized research assistant that transforms how you discover, quantitatively compare, and act on the world's highest-quality causal evidence.
+      Many policy interventions address development challenges – the key is knowing which ones deliver the greatest impact. Causal research studies aim to identify these best bets, but finding, standardizing, and comparing evidence is a complex, time-intensive task. ImpactAI is your specialized research assistant that transforms how you discover, quantitatively compare, and act on the world's highest-quality causal evidence.
     </p>
-</div>
+  </div>
 
-<p align="center" style="
-    width: 70%;
-    margin: 20px auto;
-    padding: 20px 10px;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-">
-    <span style="font-size: 20px; font-weight: bold;">7,700+</span> RCTs 
-    &nbsp;&nbsp;|&nbsp;&nbsp; 
-    <span style="font-size: 20px; font-weight: bold;">74,000+</span> Impact Estimates 
-    &nbsp;&nbsp;|&nbsp;&nbsp; 
-    <span style="font-size: 20px; font-weight: bold;">150+</span> Countries
-</p>
-
-
-
-  <!-- Footer placeholder -->
-  <!-- <div id="footer-placeholder"></div> -->
+  <p class="impact-stats">
+    <strong>7,700+</strong> RCTs
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <strong>74,000+</strong> Impact Estimates
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <strong>150+</strong> Countries
+  </p>
 
   <!-- Scripts -->
   <script src="scripts.js" defer></script>

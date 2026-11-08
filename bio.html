@@ -1,23 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bio | Saqib</title>
- <link rel="icon" type="image/png" href="photo/icon.png">
+  <link rel="icon" type="image/png" href="photo/icon.png">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
-<link
-  href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
-  rel="stylesheet"
->
+  <!-- Font: Jost -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+
   <!-- Main CSS -->
   <link href="styles.css" rel="stylesheet">
 </head>
@@ -30,16 +23,14 @@
   <div class="cursor"></div>
 
   <!-- Theme toggle button -->
-  <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+  <button id="themeToggle" type="button" onclick="toggleTheme()" aria-label="Switch to dark theme">🌙</button>
 
-  <!-- Main Section -->
- <br><br>
-<div class="pdf-container">
-  <iframe class="pdf-embed" src="cv/saqib_cv.pdf"></iframe>
-</div>
-
-  <!-- Footer placeholder -->
-  <!-- <div id="footer-placeholder"></div> -->
+  <!-- CV -->
+  <br><br>
+  <div class="pdf-container">
+    <iframe class="pdf-embed" src="cv/saqib_cv.pdf#toolbar=0&amp;navpanes=0&amp;view=FitH" title="Curriculum Vitae — Saqib Hussain"></iframe>
+  </div>
+  <p class="pdf-fallback"><a href="cv/saqib_cv.pdf" target="_blank" rel="noopener">Open CV in a new tab</a></p>
 
   <!-- Scripts -->
   <script src="scripts.js" defer></script>

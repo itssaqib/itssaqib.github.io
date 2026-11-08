@@ -1,140 +1,126 @@
-// Toggle extra bio
-function toggleBio() {
-  const extraBio = document.querySelector('.extra-bio');
-  extraBio.style.display = (extraBio.style.display === 'block') ? 'none' : 'block';
+/* =========================================================
+   Saqib Hussain — shared site script
+   ========================================================= */
+
+/* ---------- Theme (remembered across pages) ---------- */
+const THEME_KEY = 'theme';
+
+function readSavedTheme() {
+  try { return localStorage.getItem(THEME_KEY); } catch (e) { return null; }
 }
 
-// Theme toggle
-function toggleTheme() {
-  const body = document.body;
+function applyTheme(theme) {
+  const isDark = theme === 'dark';
+  document.body.classList.toggle('dark-theme', isDark);
   const btn = document.getElementById('themeToggle');
-  body.classList.toggle('dark-theme');
-
-  btn.textContent = body.classList.contains('dark-theme') ? '🌞' : '🌙';
+  if (btn) {
+    btn.textContent = isDark ? '🌞' : '🌙';
+    btn.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+  }
 }
 
-// Main DOMContentLoaded
-document.addEventListener("DOMContentLoaded", function() {
-
-  // Load header
-  fetch('header.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('header-placeholder').innerHTML = data;
-
-      // Highlight active nav link after header is loaded
-      const navLinks = document.querySelectorAll("nav a");
-      const currentPage = location.pathname.split("/").pop();
-      navLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-          link.classList.add("active");
-        }
-      });
-    });
-
-  // Load footer
-  fetch('footer.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    });
-
-  // Custom cursor
-  const cursor = document.querySelector('.cursor');
-  document.addEventListener('mousemove', (e) => {
-    cursor.style.left = `${e.pageX}px`;
-    cursor.style.top = `${e.pageY}px`;
-  });
-
-});
-
-
-
-  const links = document.querySelectorAll("nav a");
-  const content = document.getElementById("content");
-
-  links.forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const page = link.getAttribute("data-page");
-
-      fetch(page)
-        .then(res => res.text())
-        .then(html => {
-          content.innerHTML = html;
-          // highlight active tab
-          links.forEach(l => l.classList.remove("active"));
-          link.classList.add("active");
-        });
-    });
-  });
-
-// load home by default
-fetch("home.html")
-  .then(res => res.text())
-  .then(html => (content.innerHTML = html));
-
-
-
-// Function to attach Abstract toggle functionality
-function attachAbstractToggle() {
-  const toggles = document.querySelectorAll(".abstract-toggle");
-  toggles.forEach(btn => {
-    btn.removeEventListener("click", toggleAbstract); // Remove previous listener to avoid duplicates
-    btn.addEventListener("click", toggleAbstract);
-  });
+function toggleTheme() {
+  const next = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
+  applyTheme(next);
+  try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* storage unavailable */ }
 }
 
-// Toggle function
-function toggleAbstract() {
-  const abstractBox = this.closest(".paper").querySelector(".abstract-box");
-  if (abstractBox) abstractBox.classList.toggle("show");
+// Apply as early as possible to avoid a light flash
+applyTheme(readSavedTheme());
+
+/* ---------- Home page: Read More ---------- */
+function toggleBio(btn) {
+  const extraBio = document.querySelector('.extra-bio');
+  if (!extraBio) return;
+  const open = extraBio.classList.toggle('show');
+  const button = btn || document.querySelector('.bio-text .expand-btn');
+  if (button) button.textContent = open ? 'Read Less' : 'Read More';
 }
 
-// Open link in new tab
+/* ---------- Helpers ---------- */
 function openLink(url) {
-  window.open(url, "_blank");
+  window.open(url, '_blank', 'noopener');
 }
 
-// Load paper HTML and attach listeners
-function loadPapers(containerId, filePath) {
-  fetch(filePath)
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById(containerId).innerHTML = data;
-      attachAbstractToggle(); // Attach after content is loaded
-    })
-    .catch(error => console.error(`Error loading ${filePath}:`, error));
+function copyEmail(event, element) {
+  event.preventDefault();
+  const email = 'saqibhussain@kdis.ac.kr';
+  const tooltip = element.parentElement.querySelector('.tooltip-text');
+
+  const showTip = () => {
+    if (!tooltip) return;
+    tooltip.classList.add('show');
+    setTimeout(() => tooltip.classList.remove('show'), 1200);
+  };
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(email).then(showTip).catch(() => {
+      window.location.href = 'mailto:' + email;
+    });
+  } else {
+    // Clipboard API not available (e.g. http or file://) -> open mail app
+    window.location.href = 'mailto:' + email;
+  }
 }
 
-// Run after DOM is ready
-document.addEventListener("DOMContentLoaded", () => {
-  loadPapers("job", "papers/job.html");
-  loadPapers("published", "papers/published.html");
-  loadPapers("working", "papers/working.html");
-  loadPapers("wip", "papers/wip.html");
-  loadPapers("review", "papers/review.html");
+/* ---------- Abstract toggles (event delegation, works for loaded content) ---------- */
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.abstract-toggle');
+  if (!btn) return;
+  const paper = btn.closest('.paper');
+  const box = paper && paper.querySelector('.abstract-box');
+  if (box) {
+    const open = box.classList.toggle('show');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
 });
 
+/* ---------- HTML includes ---------- */
+function loadInto(el, url) {
+  if (!el) return Promise.resolve();
+  return fetch(url)
+    .then((res) => {
+      if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+      return res.text();
+    })
+    .then((html) => { el.innerHTML = html; })
+    .catch((err) => console.error('Error loading ' + url + ':', err));
+}
 
+function highlightActiveNav() {
+  let currentPage = location.pathname.split('/').pop();
+  if (!currentPage) currentPage = 'index.html';
+  document.querySelectorAll('nav a').forEach((link) => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+}
 
-window.openLink = function(url) {
-  window.open(url, "_blank");
-};
+document.addEventListener('DOMContentLoaded', () => {
+  // Header + active nav link
+  loadInto(document.getElementById('header-placeholder'), 'header.html')
+    .then(highlightActiveNav);
 
+  // Footer (only on pages that have the placeholder)
+  loadInto(document.getElementById('footer-placeholder'), 'footer.html');
 
+  // Any element with data-include="path/to/file.html"
+  const includes = Array.from(document.querySelectorAll('[data-include]'))
+    .map((el) => loadInto(el, el.getAttribute('data-include')));
 
+  // Let page scripts know when all included content is in the DOM
+  Promise.all(includes).then(() => {
+    document.dispatchEvent(new CustomEvent('includes:loaded'));
+  });
 
-  function copyEmail(event, element) {
-    event.preventDefault();
-    const email = "saqibhussain@kdis.ac.kr";
-    navigator.clipboard.writeText(email).then(() => {
-      const tooltip = element.parentElement.querySelector(".tooltip-text");
-      tooltip.classList.add("show");
-      setTimeout(() => {
-        tooltip.classList.remove("show");
-      }, 1000); // disappears after 1 second
-    }).catch(err => {
-      console.error("Failed to copy email: ", err);
+  // Custom cursor glow
+  const cursor = document.querySelector('.cursor');
+  if (cursor) {
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
     });
-  };
+  }
+});

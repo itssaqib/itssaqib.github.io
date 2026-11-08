@@ -1,0 +1,380 @@
+/* =========================================================
+   Research · Teaching · Resources — page layouts
+   Loaded after styles.css. Plain, typographic, no cards.
+   ========================================================= */
+
+:root {
+  --ink: #222;
+  --ink-soft: #444;
+  --muted: #6a6a6a;
+  --line: #e4e4e4;
+  --accent: #00a9bc;
+}
+
+body.dark-theme {
+  --ink: #f0f0f0;
+  --ink-soft: #d0d0d0;
+  --muted: #a8a8a8;
+  --line: #444;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto 5rem;
+  padding: 0 1rem;
+}
+
+/* ---------- Intro ---------- */
+.page-intro {
+  margin: 3rem 0 2rem;
+}
+
+.page-intro.centered {
+  text-align: center;
+  margin: 1.8rem 0 2.8rem;
+}
+
+.page-intro p {
+  margin: 0;
+  font-size: .95rem;
+  color: var(--ink-soft);
+}
+
+.page-intro .intro-links {
+  margin-top: .4rem;
+  font-size: .85rem;
+}
+
+.intro-links a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  transition: border-color .2s ease, color .2s ease;
+}
+
+.intro-links a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.intro-links .sep {
+  color: var(--muted);
+  margin: 0 .4rem;
+}
+
+/* ---------- Jump links (plain text) ---------- */
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2rem 1.4rem;
+  justify-content: center;
+  margin: 2rem 0 0;
+  padding: .6rem 0;
+  text-align: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.jump a {
+  margin: 0;
+  letter-spacing: 0;
+  font-weight: 300;
+  font-size: .8rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.jump a:hover {
+  color: var(--ink);
+}
+
+body.dark-theme .jump a {
+  color: var(--muted);
+}
+
+body.dark-theme .jump a:hover {
+  color: var(--ink);
+}
+
+/* ---------- Sections ---------- */
+/* override the home-page "section" flex layout from styles.css */
+.page section.block {
+  display: block;
+  max-width: none;
+  margin: 0 0 3rem;
+  padding: 0;
+  scroll-margin-top: 20px;
+}
+
+.page section.block > h2 {
+  margin: 0 0 .6rem;
+  padding: 0 0 .3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  border-bottom: 1px solid #ababab;
+}
+
+/* =========================================================
+   RESEARCH
+   ========================================================= */
+.paper-list .paper {
+  margin: 0;
+  padding: .9rem 0;
+}
+
+.paper-list .paper + .paper {
+  border-top: 1px solid var(--line);
+}
+
+.paper-list .paper-title {
+  margin: 0 0 .2rem;
+  font-size: .98rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.paper-list .paper-meta {
+  margin: 0 0 .5rem;
+  font-size: .85rem;
+}
+
+.paper-list .paper-meta:empty {
+  display: none;
+}
+
+/* Abstract: plain text, no box or rule */
+.paper-list .abstract-box {
+  margin: .7rem 0 .2rem;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  font-size: .87rem;
+  color: var(--ink-soft);
+}
+
+body.dark-theme .paper-list .abstract-box {
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+}
+
+/* Work in progress / future projects: titles only */
+.paper-list.compact .paper {
+  padding: .45rem 0;
+}
+
+.paper-list.compact .paper + .paper {
+  border-top: none;
+}
+
+.paper-list.compact .paper-title {
+  font-size: .92rem;
+  font-weight: 400;
+}
+
+.paper-list.compact .paper-meta {
+  margin: 0;
+}
+
+/* =========================================================
+   TEACHING
+   ========================================================= */
+.teach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 3rem;
+}
+
+.timeline .course-list {
+  position: relative;
+  max-width: none;
+  margin: .6rem 0 0;
+  padding: 0 0 0 1.4rem;
+}
+
+/* the vertical rail */
+.timeline .course-list::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--line);
+}
+
+.timeline .course-item {
+  position: relative;
+  margin: 0 0 1.4rem;
+  padding: 0;
+  font-size: .9rem;
+}
+
+/* dot on the rail */
+.timeline .course-item::before {
+  content: '';
+  position: absolute;
+  left: -1.4rem;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  transform: none;
+  box-sizing: border-box;
+  background: #fbfbfb;
+  border: 1px solid #717171;
+  transition: all .25s ease;
+}
+
+body.dark-theme .timeline .course-item::before {
+  background: #2a2a2a;
+  border-color: #bbb;
+}
+
+.timeline .course-item:hover::before {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.timeline .course-item .date {
+  display: block;
+  margin: 0 0 .15rem;
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .16em;
+  color: var(--accent);
+}
+
+body.dark-theme .timeline .course-item .date {
+  color: var(--accent);
+}
+
+.timeline .course-item .title {
+  display: block;
+  font-size: .95rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.timeline .course-item .institution {
+  margin-top: .1rem;
+  font-size: .82rem;
+  color: var(--muted);
+}
+
+/* =========================================================
+   RESOURCES
+   ========================================================= */
+.search-wrap {
+  position: relative;
+  max-width: 320px;
+  margin: 0 0 2.5rem;
+}
+
+.search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: .4rem 0 .4rem 1.5rem;
+  font-size: .9rem;
+  font-weight: 300;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ababab;
+  border-radius: 0;
+  outline: none;
+  transition: border-color .2s ease;
+}
+
+.search-input:focus {
+  border-bottom-color: var(--ink);
+}
+
+.search-wrap svg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translateY(-50%);
+  stroke: var(--muted);
+  fill: none;
+  stroke-width: 2;
+  pointer-events: none;
+}
+
+.res-card[hidden],
+.page section.res-block[hidden] {
+  display: none;
+}
+
+.no-results {
+  display: none;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.res-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.res-card {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 .5rem;
+  padding: .6rem 0;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.res-card + .res-card {
+  border-top: 1px solid var(--line);
+}
+
+.res-card .res-title {
+  font-size: .95rem;
+  font-weight: 500;
+  transition: color .2s ease;
+}
+
+.res-card .res-by {
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+.res-card .res-host {
+  margin-left: auto;
+  font-size: .75rem;
+  color: var(--muted);
+}
+
+.res-card:hover .res-title {
+  color: var(--accent);
+}
+
+body.dark-theme a.res-card,
+body.dark-theme a.res-card:hover {
+  color: var(--ink);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .teach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-intro {
+    margin-top: 2rem;
+  }
+
+  .res-card .res-host {
+    margin-left: 0;
+    width: 100%;
+  }
+}

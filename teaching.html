@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teaching | Saqib</title>
- <link rel="icon" type="image/png" href="photo/icon.png">
+  <link rel="icon" type="image/png" href="photo/icon.png">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Updock&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
-<link
-  href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
-  rel="stylesheet"
->
+  <!-- Font: Jost -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+
   <!-- Main CSS -->
   <link href="styles.css" rel="stylesheet">
-
+  <link href="pages.css" rel="stylesheet">
 </head>
 <body>
 
@@ -30,55 +24,35 @@
   <div class="cursor"></div>
 
   <!-- Theme toggle button -->
-  <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+  <button id="themeToggle" type="button" onclick="toggleTheme()" aria-label="Switch to dark theme">🌙</button>
 
-  <!-- Main Section -->
-<br><br>
+  <main class="page">
 
-  <!-- Published Papers -->
+    <!-- Intro -->
+    <div class="page-intro">
+      <p>Econometrics, impact evaluation, and research skills for graduate students and policy professionals.</p>
+    </div>
 
-<div class="papers-wrapper">
+    <!-- Course content lives in teaching/*.html -->
+    <div class="teach-grid">
+      <section class="block">
+        <h2>Instructor</h2>
+        <div class="timeline" id="instructor" data-include="teaching/instructor.html"></div>
+      </section>
 
-    <div class="paper-category">
-  <h2>Instructor</h2>
-  <div id="instructor"></div>
-  </div>
+      <section class="block">
+        <h2>Teaching Assistant</h2>
+        <div class="timeline" id="teaching_assistant" data-include="teaching/teaching_assistant.html"></div>
+      </section>
+    </div>
 
-    <div class="paper-category">
-  <h2>Teaching Assistant</h2>
-  <div id="teaching_assistant"></div>
-  </div>
+  </main>
 
-
-</div>
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
 
   <!-- Scripts -->
-<script src="scripts.js" defer>  </script>
-
-
-
-
-
-
-<script>
-  fetch("teaching/teaching_assistant.html") // adjust path if needed
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("teaching_assistant").innerHTML = data;
-    })
-    .catch(error => console.error("Error loading papers:", error));
-</script>
-
-<script>
-  fetch("teaching/instructor.html") // adjust path if needed
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("instructor").innerHTML = data;
-    })
-    .catch(error => console.error("Error loading papers:", error));
-</script>
-
-
-  
+  <script src="scripts.js" defer></script>
+  <script src="pages.js" defer></script>
 </body>
 </html>
